@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use yii\web\Controller;
+use app\services\ColleaguesServices;
 
 class AboutController extends Controller
 {
@@ -11,8 +12,13 @@ class AboutController extends Controller
      *
      * @return string
      */
+
     public function actionIndex()
     {
-        return $this->render('colleagues');
+        $colleagues = ColleaguesServices::getColleagues();
+
+        return $this->render('colleagues', [
+            'colleagues' => $colleagues
+        ]);
     }
  }

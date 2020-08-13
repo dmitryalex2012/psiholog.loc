@@ -48,7 +48,7 @@ AppAsset::register($this);
 //        'brandLabel' => Yii::$app->name,
 //            'brandLabel' => "Psiholog",
 //        'brandUrl' => Yii::$app->homeUrl,
-//            'brandLabel' => Html::img(Url::to('@web/foto/logo.jpg'), ['alt' => '', 'class' => 'img-responsive']),
+//            'brandLabel' => Html::img(Url::to('@web/photo/common/logo.jpg'), ['alt' => '', 'class' => 'img-responsive']),
 //            'options' => [
 //                'class' => 'navbar-inverse navbar-fixed-top',
 //            ],
@@ -122,8 +122,8 @@ AppAsset::register($this);
                     <p>&copy; Психолог Надежда 2000-2020</p>
                 </div>
                 <div class="containerRef col-sm-5 col-12">
-                    <a href="https://www.facebook.com/manufacture.design/" target="_blank">   <img src="<?php echo "/foto/facebook1.png" ?>" alt=""/></a>
-                    <a href="https://www.instagram.com/textile_decor_kiev/?hl=uk" target="_blank"><img src="<?php echo "/foto/inst1.png" ?>" alt=""/></a>
+                    <a href="https://www.facebook.com/manufacture.design/" target="_blank">   <img src="<?php echo "/photo/common/facebook1.png" ?>" alt=""/></a>
+                    <a href="https://www.instagram.com/textile_decor_kiev/?hl=uk" target="_blank"><img src="<?php echo "/photo/common/inst1.png" ?>" alt=""/></a>
                 </div>
             </div>
             <!--        <p class="pull-right">--><?//= Yii::powered() ?><!--</p>-->
