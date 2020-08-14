@@ -86,7 +86,6 @@ AppAsset::register($this);
         NavBar::end();
         ?>
 
-
         <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -118,10 +117,11 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="containerLogo col-sm-7 col-12">
-                    <p>&copy; Психолог Надежда 2000-2020</p>
+                <div class="containerLogo col-sm-8 col-12">
+<!--                    <p>&copy;Джулай Надежда Мироновна. Практикующий психолог 2000-2020</p>-->
+                    <p>Психологическая помощь. Джулай Надежда Мироновна &copy; 2000-2020</p>
                 </div>
-                <div class="containerRef col-sm-5 col-12">
+                <div class="containerRef col-sm-4 col-12">
                     <a href="https://www.facebook.com/manufacture.design/" target="_blank">   <img src="<?php echo "/photo/common/facebook1.png" ?>" alt=""/></a>
                     <a href="https://www.instagram.com/textile_decor_kiev/?hl=uk" target="_blank"><img src="<?php echo "/photo/common/inst1.png" ?>" alt=""/></a>
                 </div>

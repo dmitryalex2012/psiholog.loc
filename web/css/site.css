@@ -135,20 +135,6 @@ button.btn.btn-outline-success {
     position: relative!important;
 }
 
-/*#footer {*/
-/*    clear: both;*/
-/*    text-align: center;*/
-/*    background: darkgoldenrod;*/
-/*    font-size: medium;*/
-/*    padding: 10px;*/
-/*    margin: 20px 0 0;*/
-/*    width: 100%;*/
-/*    position: fixed;*/
-/*    bottom: 0;*/
-/*}*/
-
-
-
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {

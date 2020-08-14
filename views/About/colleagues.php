@@ -58,7 +58,6 @@ use yii\helpers\Html;
         <div class="row card-groupColleagues">
         <?php endif; ?>
             <div class="col-12 col-md-3 card">
-
                 <img src="<?php echo $colleague->photo; ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $colleague->name; ?></h5>

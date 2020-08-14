@@ -1,0 +1,166 @@
+/*body{*/
+/*    background: url(indexBackground.jpg); !* Цвет фона и путь к файлу *!*/
+/*}*/
+
+.container{
+    margin-left: 0!important;
+    margin-right: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.card-titleH1{
+    color: white!important;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 100px;
+}
+
+.card-titleH2{
+    color: white!important;
+    text-align: center;
+    margin-top: 0;
+    /*text-align: center;*/
+    /*font-size: 2em;*/
+    /*color: #fefefe;*/
+    /*font-weight: 100;*/
+    /*line-height: 42px;*/
+    /*text-decoration: none;*/
+    /*text-shadow: 0 0 5px rgba(0, 0, 0, 0);*/
+}
+
+.h2Index{
+    text-align: center;
+}
+
+.indexBtn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 0;
+    font-size: large;
+}
+
+.myCard{
+    padding: 0!important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.fonPhoto{
+    width: 100%;
+}
+
+.indexTextContent{
+    margin: 20px 30px;
+}
+
+.textIndex{
+    /*text-align: center;*/
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.siteSlogan{
+    margin-top: 40px;
+    text-align: center;
+    font-size: x-large;
+    color: #fefefe;
+    /*font-weight: 300;*/
+    /*line-height: 38px;*/
+}
+
+@media (max-width: 1250px) {
+    .card-titleH1{
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .card-titleH1{
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card-titleH1{
+        margin-top: 30px!important;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-titleH1{
+        margin-top: 5px!important;
+    }
+}
+
+@media (max-width: 800px) {
+    /*.card-img{*/
+        /*display: none;*/
+    /*}*/
+    /*.fonPhoto{*/
+    /*    display: none;*/
+    /*}*/
+
+    .card-titleH1{
+        font-size: x-large;
+        margin-top: 30px!important;
+    }
+
+    .card-titleH2{
+        font-size: large;
+    }
+
+    .siteSlogan{
+        font-size: small;
+    }
+}
+
+@media (max-width: 720px) {
+    .indexBtn{
+        width: 60%;
+        font-size: larger;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .card-titleH1{
+        font-size: x-large;
+        margin-top: 25px!important;
+    }
+
+    .card-titleH2{
+        font-size: large;
+    }
+
+    .siteSlogan{
+        font-size: small;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-titleH1{
+        margin-top: 10px!important;
+    }
+}
+
+@media (max-width: 530px) {
+    .card-titleH1{
+        margin-top: 0!important;
+        font-size: large;
+    }
+
+    .card-titleH2{
+        font-size: larger;
+    }
+}
+
+@media (max-width: 540px) {
+    .indexBtn{
+        width: 60%;
+        font-size: small;
+    }
+}
