@@ -63,7 +63,7 @@ use yii\helpers\Html;
                     <h5 class="card-title"><?php echo $colleague->name; ?></h5>
                     <p class="card-text"><?php echo "Специализация: " . $colleague->specialization; ?></p>
                     <p class="card-text"><?php echo "Методы: " . $colleague->methods; ?></p>
-                    <?php echo Html::a("Подробнее", ['#', 'value' => $colleague->id], ['class'=>'indexBtnAbout btn btn-outline-info']);
+                    <?php echo Html::a("Подробнее", ['/about/detail', 'colleagueID' => $colleague->id], ['class'=>'indexBtnAbout btn btn-outline-info']);
                     ?>
                 </div>
             </div>

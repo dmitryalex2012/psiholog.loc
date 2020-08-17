@@ -15,4 +15,9 @@ class ColleaguesServices
     {
         return Colleagues::findColleagues();
     }
+
+    public static function getColleague ($colleagueID)
+    {
+        return Colleagues::findColleague($colleagueID);
+    }
 }

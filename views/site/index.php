@@ -28,7 +28,7 @@ use yii\helpers\Html; ?>
             <div class="row">
                 <div class="col-7">
                     <h1 class="card-titleH1">Джулай Надежда Мироновна</h1>
-                    <h2 class="card-titleH2">Практикующий психолог</h2>
+                    <h2 class="card-titleH2">Психиатр, психотерапевт</h2>
                     <div class="siteSlogan">
                         "Познание психологии открыло<br>
                         дверь в иной мир,<br>
