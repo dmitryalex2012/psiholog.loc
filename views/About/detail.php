@@ -1,6 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+
+use yii\helpers\Html;
+
 /* @var $colleague array */
 /* @var $colleagues object */
 
@@ -30,6 +33,36 @@
 //echo '<pre>';
 //var_dump($colleague);
 //?>
+
+    <?php $biography = explode('\n', $colleague->biography ); ?>
+
+<!--    --><?php
+//    var_dump($biography);
+//    ?>
+
+    <div>
+        <p><img class="photoDetail" src="<?php echo $colleague->photo; ?>" alt=""/></p>
+<!--        <p><img src="--><?php //echo $colleague->photo; ?><!--" alt=""/></p>-->
+
+        <p class="aboutColleague"><strong> Специализация: </strong> <?php echo ' ' . $colleague->specialization . '.' ?></p>
+        <p class="aboutColleague"><strong> Методы: </strong> <?php echo ' ' . $colleague->methods . '.' ?></p>
+        <p class="colleagueBiography"><strong> Биография: </strong> <?php echo $biography[0]; ?></p>
+
+        <?php array_shift($biography);
+        foreach ($biography as $value): ?>
+            <p class="aboutColleagueParagraph"><?php echo $value; ?></p>
+        <?php endforeach; ?>
+
+    </div>
+
+    <div class="detailButton">
+        <?php echo Html::a('Записаться на консультацию', ['/blog/display'], ['class'=>'indexBtn btn btn-success']);
+        ?>
+    </div>
+
+    <div class="certificates">
+
+    </div>
 
 
 <!--    --><?php //$i = 0; ?>

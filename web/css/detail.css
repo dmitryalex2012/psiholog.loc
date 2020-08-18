@@ -11,3 +11,57 @@
     margin-top: 0;
     margin-bottom: 20px;
 }
+
+.photoDetail{
+    float: left;
+    margin: 0 30px 30px 10px;
+    width: 300px;
+}
+
+.aboutColleague{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.colleagueBiography{
+    text-align: justify;
+}
+
+.aboutColleagueParagraph{
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.detailButton{
+    clear: left;
+    margin-bottom: 30px;
+}
+
+/*@media (max-width: 600px) {*/
+/*    .indexBtn{*/
+/*        width: 70%;*/
+/*        font-size: small;*/
+/*    }*/
+/*}*/
+
+/*.indexBtn{*/
+/*    width: 50%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin: 30px auto 0;*/
+/*    font-size: large;*/
+/*}*/
+
+/*@media (max-width: 720px) {*/
+/*    .indexBtn{*/
+/*        width: 60%;*/
+/*        font-size: larger;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 540px) {*/
+/*    .indexBtn{*/
+/*        width: 60%;*/
+/*        font-size: small;*/
+/*    }*/
+/*}*/
