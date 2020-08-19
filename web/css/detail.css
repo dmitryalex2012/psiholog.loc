@@ -12,6 +12,10 @@
     margin-bottom: 20px;
 }
 
+.h3Detail{
+    text-align: center;
+}
+
 .photoDetail{
     float: left;
     margin: 0 30px 30px 10px;
@@ -36,6 +40,19 @@
     clear: left;
     margin-bottom: 30px;
 }
+
+/*.card-img-top:hover{*/
+/*    top: -50px;*/
+/*    left: -50px;*/
+/*    width: 300px;*/
+/*}*/
+
+/*.certificatePhoto{*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+
 
 /*@media (max-width: 600px) {*/
 /*    .indexBtn{*/
