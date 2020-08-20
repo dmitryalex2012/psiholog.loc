@@ -49,6 +49,10 @@
     border-color: #17a2b8!important;
 }
 
+.card-footer{
+    border-top: none!important;
+}
+
 @media(max-width:767px) {
     .card-img-top{
         margin-top: 30px;

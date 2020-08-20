@@ -10,10 +10,6 @@ use yii\helpers\Html;
 //$this->title = 'My Yii Application';
 ?>
 
-<!--C:\Program Files (x86)\OpenServer\OSPanel\domains\psiholog.loc\web\photo\simplebox\imgs-->
-<!--/photo/certificates/id1_1.jpg-->
-
-
 <div class="containerDetail">
 
     <?php $this->params['breadcrumbs'][] = [
@@ -25,11 +21,6 @@ use yii\helpers\Html;
     ?>
 
     <h2 class="h2AboutDetail"><?php echo $colleague->name; ?></h2>
-
-<?php
-//echo '<pre>';
-//var_dump($colleague);
-//?>
 
     <?php $biography = explode('\n', $colleague->biography ); ?>
 
@@ -49,7 +40,7 @@ use yii\helpers\Html;
     </div>
 
     <div class="detailButton">
-        <?php echo Html::a('Записаться на консультацию', ['/blog/display'], ['class'=>'indexBtn btn btn-success']);
+        <?php echo Html::a('Записаться на прием', ['/site/feedback'], ['class'=>'indexBtn btn btn-success']);
         ?>
     </div>
 
@@ -59,29 +50,28 @@ use yii\helpers\Html;
 
         <?php $certificates = explode(',', $colleague->certificates ); ?>
 
-
-
-
-
         <?php $i = 0; ?>
 
         <?php foreach ($certificates as $key=>$certificate):
-            if ((((++$i) % 6) == 1)):                   //  output cards in 2 columns
+            if ((((++$i) % 6) == 1)):                   //  output cards in 6 columns
                 ?>
                 <div class="row card-groupColleagues">
             <?php endif; ?>
+
             <div class="col-12 col-sm-4 col-md-2 card">
-                <img src="<?php echo $certificate; ?>" class="card-img-top" alt="...">
-            </div>
-            <!--    close "row" (after each 2 columns)-->
-            <?php if ((($i % 6) == 0)): ?>
+                <input id=pic<?php echo $i . '"'; ?> type="checkbox">
+                <label class="certificatePhoto" for=pic<?php echo $i . '"'; ?> style="background-image: url(<?php echo $certificate ?>);">
+                </label>
             </div>
 
+            <!--    close "row" (after each 6 columns)-->
+            <?php if ((($i % 6) == 0)): ?>
+            </div>
         <?php endif; ?>
         <?php endforeach;
+
         if (($i % 6) != 0)     { echo  "</div>";    }   // it's necessary to close "row" by "/div" when "col" are odd
         ?>
 
     </div>
-
 </div>

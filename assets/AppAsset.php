@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
         'css/contacts.css',
         'css/detail.css',
         'css/services.css',
+        'css/feedback.css',
     ];
     public $js = [
     ];

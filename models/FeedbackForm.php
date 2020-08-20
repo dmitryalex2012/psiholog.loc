@@ -6,14 +6,17 @@ use Yii;
 use yii\base\Model;
 
 /**
- * ContactForm is the model behind the contact form.
+ * FeedbackForm is the model behind the contact form.
  */
-class ContactForm extends Model
+class FeedbackForm extends Model
 {
     public $name;
+    public $age;
+    public $sex;
     public $email;
-    public $subject;
-    public $body;
+    public $phone;
+    public $reason;
+    public $receiptDate;
     public $verifyCode;
 
 
@@ -24,7 +27,7 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
+            [['name', 'email', 'phone'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
@@ -54,8 +57,8 @@ class ContactForm extends Model
                 ->setTo($email)
                 ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                 ->setReplyTo([$this->email => $this->name])
-                ->setSubject($this->subject)
-                ->setTextBody($this->body)
+//                ->setSubject($this->subject)
+//                ->setTextBody($this->body)
                 ->send();
 
             return true;

@@ -1,0 +1,19 @@
+.h1Feedback{
+    text-align: center;
+}
+
+.feedbackField{
+    width: 70%;
+}
+
+.feedbackBtn{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 0;
+    font-size: large;
+}
+
+/*.feedbackCaptcha{*/
+/*    text-align: center;*/
+/*}*/

@@ -42,7 +42,7 @@ use yii\helpers\Html; ?>
     </div>
 <!--    <img class="fonPhoto" src="--><?php //echo '/photo/common/indexBackground.jpg' ?><!-- " alt="...">-->
 
-    <?php echo Html::a('Записаться на консультацию', ['/blog/display'], ['class'=>'indexBtn btn btn-success']);
+    <?php echo Html::a('Записаться на прием', ['/site/feedback'], ['class'=>'indexBtn btn btn-success']);
     ?>
 
     <div class="indexTextContent">

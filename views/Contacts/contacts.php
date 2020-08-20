@@ -5,7 +5,7 @@
 use yii\helpers\Html;
 
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\models\ContactForm */
+/* @var $model app\models\FeedbackForm */
 ?>
 
 <div class="containerContacts">

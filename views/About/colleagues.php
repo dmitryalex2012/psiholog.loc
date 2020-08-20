@@ -54,22 +54,31 @@ use yii\helpers\Html;
 
     <?php foreach ($colleagues as $key=>$colleague):
         if ((((++$i) % 4) == 1)):                   //  output cards in 2 columns
-            ?>
+    ?>
         <div class="row card-groupColleagues">
         <?php endif; ?>
+
             <div class="col-12 col-md-3 card">
+
                 <img src="<?php echo $colleague->photo; ?>" class="card-img-top" alt="...">
+
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $colleague->name; ?></h5>
                     <p class="card-text"><?php echo "Специализация: " . $colleague->specialization; ?></p>
                     <p class="card-text"><?php echo "Методы: " . $colleague->methods; ?></p>
+                </div>
+
+                <div class="card-footer">
                     <?php echo Html::a("Подробнее", ['/about/detail', 'colleagueID' => $colleague->id], ['class'=>'indexBtnAbout btn btn-outline-info']);
                     ?>
                 </div>
+
             </div>
+
         <?php if ((($i % 4) == 0)): ?>
         </div>                                      <!-- close "row" (after each 2 columns) -->
-    <?php endif; ?>
+        <?php endif; ?>
+
     <?php endforeach;
     if (($i % 4) != 0)     { echo  "</div>";    }   // it's necessary to close "row" by "/div" when "col" are odd
     ?>

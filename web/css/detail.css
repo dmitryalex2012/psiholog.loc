@@ -41,44 +41,38 @@
     margin-bottom: 30px;
 }
 
-/*.card-img-top:hover{*/
-/*    top: -50px;*/
-/*    left: -50px;*/
-/*    width: 300px;*/
-/*}*/
 
-/*.certificatePhoto{*/
-/*    cursor: pointer;*/
-/*}*/
+input[type="checkbox"] {
+    display: none;
+}
 
+input + label {
+    display: block;
+    width: 160px;
+    height: 120px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /*  transition: .4s;
+    */
+}
+input:checked + label {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
 
+    /*background-size: auto;*/
+    background-size: 500px;
+    z-index: 99999;
+}
 
-
-/*@media (max-width: 600px) {*/
-/*    .indexBtn{*/
-/*        width: 70%;*/
-/*        font-size: small;*/
-/*    }*/
-/*}*/
-
-/*.indexBtn{*/
-/*    width: 50%;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin: 30px auto 0;*/
-/*    font-size: large;*/
-/*}*/
-
-/*@media (max-width: 720px) {*/
-/*    .indexBtn{*/
-/*        width: 60%;*/
-/*        font-size: larger;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 540px) {*/
-/*    .indexBtn{*/
-/*        width: 60%;*/
-/*        font-size: small;*/
-/*    }*/
-/*}*/
+.certificatePhoto{
+    cursor: pointer;
+}
