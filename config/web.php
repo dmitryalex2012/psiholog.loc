@@ -31,7 +31,18 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+//            'useFileTransport' => true,
+
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => 'tpmfd27@gmail.com',
+                'password' => 'oapvrqlwrfksbcay',
+                'port' => '587',
+                'encryption' => 'tls',
+                'streamOptions' => ['ssl' => ['allow_self_signed' => true, 'verify_peer' => false, 'verify_peer_name' => false,],]
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -49,6 +60,13 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             ],
+        ],
+
+        'reCaptcha' => [
+            'name' => 'reCaptcha',
+            'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+            'siteKey' => '6LeNwsEZAAAAAJ0bKPaY5zGyD5hwOsGN9GE2kP30 ',
+            'secret' => '6LeNwsEZAAAAAM21dhz5in7PJkxz_ut8Ojay4W0W',
         ],
 
     ],

@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use himiklab\yii2\recaptcha\ReCaptchaValidator;
 use Yii;
 use yii\base\Model;
 
@@ -17,7 +18,8 @@ class FeedbackForm extends Model
     public $phone;
     public $reason;
     public $receiptDate;
-    public $verifyCode;
+//    public $verifyCode;
+    public $reCaptcha;
 
 
     /**
@@ -27,11 +29,12 @@ class FeedbackForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'phone'], 'required'],
+            [['name', 'email', 'phone'], 'required', 'message'=>'Не заполнено поле'],
             // email has to be a valid email address
-            ['email', 'email'],
+            ['email', 'email', 'message'=>'Некорректный e-mail'],
             // verifyCode needs to be entered correctly
-            ['verifyCode', 'captcha'],
+//            ['verifyCode', 'captcha'],
+            [['reCaptcha'], ReCaptchaValidator::className(), 'secret' => '6LeNwsEZAAAAAM21dhz5in7PJkxz_ut8Ojay4W0W', 'uncheckedMessage' => 'Please confirm that you are not a bot.'],
         ];
     }
 
@@ -52,15 +55,27 @@ class FeedbackForm extends Model
      */
     public function contact($email)
     {
+        $textBody = "thisIs" . $email;
+
         if ($this->validate()) {
             Yii::$app->mailer->compose()
-                ->setTo($email)
-                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-                ->setReplyTo([$this->email => $this->name])
-//                ->setSubject($this->subject)
-//                ->setTextBody($this->body)
+                ->setTo('DmitryAlex2012@gmail.com')
+            //                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+                ->setFrom($this->email)
+            //                ->setReplyTo([$this->email => $this->name])
+                ->setSubject($this->name)
+                ->setTextBody($textBody)
                 ->send();
 
+//            $reply = "Здравствуйте." . "\r\n" . "Номер Вашего заказа:" . "." . "\n" . "\r\n" .
+//                "Состав заказа:" . "\n" . "\r\n" . "\r\n" .
+//                "Спасибо за то, что выбрали нас. Наш дизайнер свяжется с Вами в ближайшее время.";
+//            Yii::$app->mailer->compose()
+//                ->setTo(['DmitryAlex2012@gmail.com'])      // send mails
+//                ->setFrom([$email])
+//                ->setSubject($this->name)
+//                ->setTextBody($textBody)
+//                ->send();
             return true;
         }
         return false;
