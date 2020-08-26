@@ -16,7 +16,7 @@ use yii\helpers\Html;
         <div id="map"></div>
     </div>
     <script>
-        let setLatLng = {lat: 50.466282, lng: 30.615236};
+        let setLatLng = {lat: 50.481580, lng: 30.470194};
 
         function initMap() {
             let map = new google.maps.Map(document.getElementById('map'), { // load map with zoom 15
@@ -42,20 +42,20 @@ use yii\helpers\Html;
 
     <div class="ourContacts col-12 col-md-3">
         <p class="contactsHeading">ЗВОНИТЕ:</p>
+        <p class="contactsInformation">+38(098)455-28-77</p>
         <p class="contactsInformation">+38(093)339-67-91</p>
         <p class="contactsInformation">+38(098)455-28-77 (viber)</p>
 
         <p class="contactsHeading">ПИШИТЕ:</p>
-        <p class="contactsInformation">snn.manufactura@gmail.com</p>
+        <p class="contactsInformation">nade444@gmail.com</p>
 
         <p class="contactsHeading">МЫ РАБОТАЕМ:</p>
-        <p class="contactsInformation">Пн-Пт: с 9 до 18</p>
-        <p class="contactsInformation">Пн-Пт: с 10 до 17</p>
-        <p class="contactsInformation">Пн-Пт: с 10 до 14</p>
+        <p class="contactsInformation">Пн-Сб: с 8 до 20</p>
 
         <p class="contactsHeading">ПРИЕЗЖАЙТЕ:</p>
-        <p class="contactsInformation">г. Киев, ул. , оф. </p>
-<!--        <p class="contactsInformation">Пожалуйста, перезвоните заранее</p>-->
+        <p class="contactsInformation">г. Киев, ул. Кирилловская 103</p>
+        <p class="contactsInformation">корпус 11, 5 этаж, кабинет 508</p>
+        <p class="message">Пожалуйста, перезвоните заранее</p>
 
         <?php echo Html::a('Записаться на консультацию', ['/blog/display'], ['class'=>'contactsBtn btn btn-success']);
         ?>

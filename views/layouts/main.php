@@ -58,7 +58,7 @@ AppAsset::register($this);
             'items' => [
                 ['label' => 'Главная', 'url' => ['/site/index']],
                 ['label' => 'О нас',  'url' => ['/about/index']],
-                ['label' => 'Услуги', 'url' => ['/services/list']],
+                ['label' => 'Услуги', 'url' => ['/offers/list']],
                 ['label' => 'Блог', 'url' => ['/blog/display']],
                 ['label' => 'Контакты', 'url' => ['/contacts/load']],
 

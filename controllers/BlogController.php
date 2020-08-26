@@ -9,7 +9,7 @@ use yii\web\Controller;
 class BlogController extends Controller
 {
     /**
-     * Displays "Services" page.
+     * Displays "Offers" page.
      *
      * @return string
      */
