@@ -13,5 +13,4 @@ class Offers extends ActiveRecord
     {
         return Offers::find()->all();
     }
-
 }

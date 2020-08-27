@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m200826_145517_offers
+ * Class m200827_130437_offers
  */
-class m200826_145517_offers extends Migration
+class m200827_130437_offers extends Migration
 {
     /**
      * {@inheritdoc}
@@ -28,5 +28,4 @@ class m200826_145517_offers extends Migration
     {
         return false;
     }
-
 }
