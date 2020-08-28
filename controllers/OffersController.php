@@ -5,18 +5,19 @@ namespace app\controllers;
 
 use app\services\OurOffersServices;
 use app\services\PsychiatryDirectionsServices;
+use Yii;
 use yii\web\Controller;
 
 
 class OffersController extends Controller
 {
     private $offersServices;
-    private $psychiatryDirections;
+    private $psychiatryDirectionsServices;
 
     public function __construct($id, $module, $config = [])
     {
         $this->offersServices = new OurOffersServices();
-        $this->psychiatryDirections = new PsychiatryDirectionsServices();
+        $this->psychiatryDirectionsServices = new PsychiatryDirectionsServices();
 
         parent::__construct($id, $module, $config);
     }
@@ -29,9 +30,11 @@ class OffersController extends Controller
     public function actionList()
     {
         $offers = $this->offersServices->getOffers();
+        $directions = $this->psychiatryDirectionsServices->getPsychiatryDirections();
 
         return $this->render('offers', [
-            'offers'=>$offers
+            'offers'=>$offers,
+            'directions'=>$directions
             ]);
     }
 
@@ -40,12 +43,23 @@ class OffersController extends Controller
      *
      * @return string
      */
-    public function actionDetails()
+    public function actionOffer()
     {
-        $psychiatryDirections = $this->psychiatryDirections->getPsychiatryDirections();
+        $id = Yii::$app->request->get('id');
+        $offer = $this->offersServices->getOffer($id);
 
-        return $this->render('psychiatryDirections', [
-            'psychiatryDirections'=>$psychiatryDirections
+        return $this->render('detailOffer', [
+            'detailOffer'=>$offer
+        ]);
+    }
+
+    public function actionDirection()
+    {
+        $id = Yii::$app->request->get('id');
+        $direction = $this->psychiatryDirectionsServices->getPsychiatryDirection($id);
+
+        return $this->render('detailOffer', [
+            'detailOffer'=>$direction
         ]);
     }
 }

@@ -75,7 +75,9 @@ h3, .h3 {
 
 .card:hover .h2Offers{
     color: #3290e1;
-    /*font-size: large;*/
+    /*font-family: x-small, serif;*/
+    /*font-size: small;*/
+    /*text-shadow: 1px 1px 1px #4e674a, 0 0 1em #cfe0d7;*/
 }
 
 

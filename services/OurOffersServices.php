@@ -16,4 +16,9 @@ class OurOffersServices
         return Offers::findOffers();
     }
 
+    public static function getOffer ($id)
+    {
+        return Offers::findOffer($id);
+    }
+
 }

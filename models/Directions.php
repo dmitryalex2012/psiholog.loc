@@ -11,4 +11,9 @@ class Directions extends ActiveRecord
         return Directions::find()->all();
     }
 
+    public static function findPsychiatryDirection($id)
+    {
+        return Directions::find()->where(['id'=>$id])->one();
+    }
+
 }

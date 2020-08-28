@@ -13,4 +13,9 @@ class Offers extends ActiveRecord
     {
         return Offers::find()->all();
     }
+
+    public static function findOffer($id)
+    {
+        return Offers::find()->where(['id'=>$id])->one();
+    }
 }
