@@ -38,6 +38,13 @@ AppAsset::register($this);
         <!--        <title>--><?//= Html::encode($this->title) ?><!--</title>-->
         <title><?php echo "Психолог• консультация психолога• конфиденциально"; ?></title>
         <?php $this->head() ?>
+
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+
+
     </head>
     <body>
     <?php $this->beginBody() ?>
