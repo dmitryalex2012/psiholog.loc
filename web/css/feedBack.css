@@ -26,3 +26,10 @@
     display: flex;
     justify-content: center;
 }
+
+.alert{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center!important;
+}

@@ -105,6 +105,10 @@ class SiteController extends Controller
      */
     public function actionFeedback()
     {
+
+        $doctor = Yii::$app->request->get('id');
+
+
         $model = new FeedbackForm();
 
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
@@ -114,6 +118,9 @@ class SiteController extends Controller
         }
         return $this->render('feedBack', [
             'model' => $model,
+
+            'doctor' => $doctor
+
         ]);
     }
 
