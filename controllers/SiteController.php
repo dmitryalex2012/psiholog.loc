@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\services\SiteServices;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -12,6 +13,16 @@ use app\models\FeedbackForm;
 
 class SiteController extends Controller
 {
+    private $model;
+
+    public function __construct($id, $module, $config = [])
+    {
+        $this->model = new FeedbackForm();
+
+        parent::__construct($id, $module, $config);
+    }
+
+
     /**
      * {@inheritdoc}
      */
@@ -105,22 +116,20 @@ class SiteController extends Controller
      */
     public function actionFeedback()
     {
-
         $doctor = Yii::$app->request->get('id');
+        $method = Yii::$app->request->get('method');
 
+        SiteServices::setDoctorOrMethod($doctor, $method);
 
-        $model = new FeedbackForm();
+//        $model = new FeedbackForm();
 
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        if ($this->model->load(Yii::$app->request->post()) && $this->model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
         }
         return $this->render('feedBack', [
-            'model' => $model,
-
-            'doctor' => $doctor
-
+            'model' => $this->model,
         ]);
     }
 

@@ -55,16 +55,36 @@ class FeedbackForm extends Model
      */
     public function contact($email)
     {
-        $textBody = "thisIs" . $email;
+        $session = Yii::$app->session;
+        $session->open();
+
+        if (!$session->has('order')) {
+
+            $messageContent = "Доктор: " . "-" . "\r\n";
+            $messageContent = $messageContent . "Услуга: " . "-" . "\r\n";
+
+        } else {
+
+            $order = $session->get('order');
+
+            $messageContent = "Доктор: " . $order['doctor'] . "\r\n";
+            $messageContent = $messageContent . "Услуга: " . $order['method'] . "\r\n";
+        }
+
+        $messageContent = $messageContent . "Сообщеие заказчика: " . $this->sex;
+//        . "\r\n"
+
+        $session->close();
+        Yii::$app->session->destroy();
 
         if ($this->validate()) {
             Yii::$app->mailer->compose()
                 ->setTo('DmitryAlex2012@gmail.com')
             //                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-                ->setFrom($this->email)
+                ->setFrom($email)
             //                ->setReplyTo([$this->email => $this->name])
                 ->setSubject($this->name)
-                ->setTextBody($textBody)
+                ->setTextBody($messageContent)
                 ->send();
 
 //            $reply = "Здравствуйте." . "\r\n" . "Номер Вашего заказа:" . "." . "\n" . "\r\n" .

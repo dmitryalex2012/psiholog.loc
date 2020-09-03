@@ -40,7 +40,7 @@ use yii\helpers\Html;
     </div>
 
     <div class="detailButton">
-        <?php echo Html::a('Записаться на прием', ['/site/feedback'], ['class'=>'indexBtn btn btn-success']);
+        <?php echo Html::a('Записаться на прием', ['/site/feedback', 'id'=> $colleague->id], ['class'=>'indexBtn btn btn-success']);
         ?>
     </div>
 

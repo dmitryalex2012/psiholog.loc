@@ -2,6 +2,9 @@
 
 <?php
 /* @var $detailOffer array */
+
+use yii\helpers\Html;
+
 ?>
 
 
@@ -18,6 +21,10 @@
     <div class="mainDescription">
         <h1 class="h1Services"><?php echo $detailOffer['content']; ?></h1>
     </div>
+
+
+    <?php echo Html::a('Записаться на прием', ['/site/feedback', 'method'=>$detailOffer['id']], ['class'=>'indexBtn btn btn-success']);
+    ?>
 
 <!--    --><?php
 //    echo '<pre>';

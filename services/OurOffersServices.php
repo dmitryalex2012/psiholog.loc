@@ -11,12 +11,12 @@ class OurOffersServices
      *
      * @return mixed
      */
-    public static function getOffers ()
+    public function getOffers ()
     {
         return Offers::findOffers();
     }
 
-    public static function getOffer ($id)
+    public function getOffer ($id)
     {
         return Offers::findOffer($id);
     }

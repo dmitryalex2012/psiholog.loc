@@ -57,7 +57,7 @@ use yii\helpers\Html;
         <p class="contactsInformation">корпус 11, 5 этаж, кабинет 508</p>
         <p class="message">Пожалуйста, перезвоните заранее</p>
 
-        <?php echo Html::a('Записаться на консультацию', ['/blog/display'], ['class'=>'contactsBtn btn btn-success']);
+        <?php echo Html::a('Записаться на консультацию', ['/site/feedback'], ['class'=>'contactsBtn btn btn-success']);
         ?>
 
     </div>

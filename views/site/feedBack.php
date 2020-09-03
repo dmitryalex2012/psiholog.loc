@@ -6,6 +6,10 @@
 
 /* @var $doctor string */
 
+
+/* @var $order array */
+
+
 use himiklab\yii2\recaptcha\ReCaptcha2;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -19,7 +23,13 @@ $this->title = 'Запись на прием';
 
 
     <?php
+//    echo "abc";
+//    $doctor = gettype($doctor);
     echo $doctor;
+
+//    echo '<pre>';
+//    var_dump($order);
+//    echo '</pre>';
     ?>
 
 
