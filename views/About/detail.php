@@ -16,37 +16,56 @@ use yii\helpers\Html;
         'label'=> 'О нас',
         'url'=> ['/about/index'],
     ];
-    $this->params['breadcrumbs'][] = $colleague->specialization . ' ' . $colleague->name;
+//    $this->params['breadcrumbs'][] = $colleague->specialization . ' ' . $colleague->name;
+    $this->params['breadcrumbs'][] = $colleague->name;
 
     ?>
 
     <h2 class="h2AboutDetail"><?php echo $colleague->name; ?></h2>
+    <h3 class="h3AboutDetail"><?php echo $colleague->degree; ?></h3>
 
-    <?php $biography = explode('\n', $colleague->biography ); ?>
+    <?php   $education = explode('\n', $colleague->education );
+            $listMethods = explode('\n', $colleague->listMethods );
+//            $descriptionAdditional = explode('\n', $colleague->descriptionAdditional );
+    ?>
 
     <div>
         <p><img class="photoDetail" src="<?php echo $colleague->photo; ?>" alt=""/></p>
 <!--        <p><img src="--><?php //echo $colleague->photo; ?><!--" alt=""/></p>-->
 
-        <p class="aboutColleague"><strong> Специализация: </strong> <?php echo ' ' . $colleague->specialization . '.' ?></p>
-        <p class="aboutColleague"><strong> Методы: </strong> <?php echo ' ' . $colleague->methods . '.' ?></p>
-        <p class="colleagueBiography"><strong> Биография: </strong> <?php echo $biography[0]; ?></p>
-
-        <?php array_shift($biography);
-        foreach ($biography as $value): ?>
+        <!--        <p class="colleagueBiography"><strong> Образование: </strong> --><?php //echo $biography[0]; ?><!--</p>-->
+        <!--        --><?php //array_shift($biography); ?>
+        <p class="colleagueDescription"><strong> Образование: </strong> </p>
+        <?php foreach ($education as $value): ?>
             <p class="aboutColleagueParagraph"><?php echo $value; ?></p>
         <?php endforeach; ?>
 
+<!--        <p class="colleagueSpecialization"><strong> Специализация: </strong> --><?php //echo ' ' . $colleague->specialization . '.' ?><!--</p>-->
+<!--        <p class="aboutColleague"><strong> Методы: </strong> --><?php //echo ' ' . $descriptionMethods[0] ?><!--</p>-->
+<!--        --><?php //array_shift($descriptionMethods); ?>
+        <p class="colleagueDescription"><strong> Методы: </strong> </p>
+            <?php foreach ($listMethods as $value): ?>
+                <p class="aboutColleagueParagraph"><?php echo $value; ?></p>
+            <?php endforeach; ?>
+
+<!--        --><?php //if (isset($colleague->titleAdditional)): ?>
+<!--            <p class="colleagueDescription"><strong> --><?php //echo $colleague->titleAdditional ?><!-- </strong> </p>-->
+<!--            --><?php //foreach ($descriptionAdditional as $value): ?>
+<!--                <p class="aboutColleagueParagraph">--><?php //echo $value; ?><!--</p>-->
+<!--            --><?php //endforeach; ?>
+<!--        --><?php //endif; ?>
+
     </div>
+
 
     <div class="detailButton">
         <?php echo Html::a('Записаться на прием', ['/site/feedback', 'id'=> $colleague->id], ['class'=>'indexBtn btn btn-success']);
         ?>
     </div>
 
+
     <div class="certificates">
         <h3 class="h3Detail">Сертификаты</h3>
-
 
         <?php $certificates = explode(',', $colleague->certificates ); ?>
 

@@ -20,30 +20,6 @@ use yii\helpers\Html;
 
     <h2 class="h2About">Наша команда</h2>
 
-
-
-
-
-<!--    <div class="row card-groupColleagues">-->
-<!--        <div class="col-md-6 card">-->
-<!--            <img src="--><?php //echo "/photo/colleague/psiholog1.jpg" ?><!--" class="card-img-top" alt="...">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Название карточки</h5>-->
-<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-md-6 card">-->
-<!--            <img src="..." class="card-img-top" alt="...">-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title">Название карточки</h5>-->
-<!--                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>-->
-<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
 <?php
 //echo '<pre>';
 //var_dump($colleagues);
@@ -65,7 +41,7 @@ use yii\helpers\Html;
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $colleague->name; ?></h5>
                     <p class="card-text"><?php echo "Специализация: " . $colleague->specialization; ?></p>
-                    <p class="card-text"><?php echo "Методы: " . $colleague->methods; ?></p>
+<!--                    <p class="card-text">--><?php //echo "Методы: " . $colleague->listMethods; ?><!--</p>-->
                 </div>
 
                 <div class="card-footer">

@@ -9,7 +9,15 @@
     color: #669978;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.h3AboutDetail{
+    font-size: 25px;
+    color: #669978;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .h3Detail{
@@ -18,17 +26,8 @@
 
 .photoDetail{
     float: left;
-    margin: 0 30px 30px 10px;
+    margin: 0 30px 20px 10px;
     width: 300px;
-}
-
-.aboutColleague{
-    margin-bottom: 10px;
-    text-align: justify;
-}
-
-.colleagueBiography{
-    text-align: justify;
 }
 
 .aboutColleagueParagraph{
@@ -39,6 +38,17 @@
 .detailButton{
     clear: left;
     margin-bottom: 30px;
+}
+
+.colleagueSpecialization{
+    margin-bottom: 10px;
+    text-align: center;
+    /*text-align: justify;*/
+}
+
+.colleagueDescription{
+    margin-top: 10px;
+    text-align: center;
 }
 
 
@@ -75,4 +85,15 @@ input:checked + label {
 
 .certificatePhoto{
     cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .photoDetail{
+        /*width: 500px;*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
 }
