@@ -64,8 +64,9 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
                 ['label' => 'Главная', 'url' => ['/site/index']],
-                ['label' => 'О нас',  'url' => ['/about/index']],
                 ['label' => 'Услуги', 'url' => ['/offers/list']],
+                ['label' => 'Галерея', 'url' => ['/gallery/index']],
+                ['label' => 'О нас',  'url' => ['/about/index']],
                 ['label' => 'Блог', 'url' => ['/blog/display']],
                 ['label' => 'Контакты', 'url' => ['/contacts/load']],
 
