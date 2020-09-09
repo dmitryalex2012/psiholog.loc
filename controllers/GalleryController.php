@@ -2,13 +2,12 @@
 
 namespace app\controllers;
 
+use app\services\GalleryServices;
 use yii\web\Controller;
 
 
 class GalleryController extends Controller
 {
-
-
     /**
      * Displays 'Gallery' page.
      *
@@ -16,6 +15,10 @@ class GalleryController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('gallery');
+        $gallery = GalleryServices::getGallery();
+
+        return $this->render('gallery',[
+            'gallery' => $gallery
+        ]);
     }
 }

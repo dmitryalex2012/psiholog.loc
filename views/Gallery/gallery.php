@@ -1,7 +1,7 @@
 <?php
 
 ///* @var $this yii\web\View */
-///* @var $colleague array */
+/* @var $gallery array */
 ///* @var $colleagues object */
 
 //$this->title = 'My Yii Application';
@@ -9,17 +9,36 @@
 
 <div class="containerGallery">
 
+<!--    --><?php
+//    echo '<pre>';
+//    print_r($gallery);
+//    echo '</pre>';
+//    ?>
 
-    <div class="products">
-        <?php foreach ($worksList as $key => $item): ?>
+    <div class="mainGallery">
+
+        <?php
+        $cardsGroupQuantity = count($gallery);
+        ?>
+
+        <?php
+        $cards = 0;
+        foreach($gallery as $key => $item):
+        if (($cards % 2) === 0):
+        ?>
             <div class="row">
-                <div class="col-12 col-lg-5">                            <!-- output "carousel" photos in this column -->
+        <?php endif; ?>
+
+                <div class="col-12 col-lg-6">
+
                     <h3><?php echo $item->title; ?></h3>                 <!-- output title photos group -->
 
-                    <?php                                                  // make array with photo addresses and count photo quantity
-                    $photoAddress = (explode(",",$item->notes));  // $worksList[notes] contains relative path to
-                    $quantity = count(explode(",",$item->notes)); //   some photo of our work. Relative paths is
-                    ?>                                                    <!--  divided by "," each from other -->
+                    <!-- Make array with photo addresses and count photo quantity. $gallery[photoAddress] contains -->
+                    <!--   relative path to photo. Relative paths is divided by "," each from other -->
+                    <?php
+                    $photoAddress = (explode(",",$item->photoAddress));
+                    $quantity = count(explode(",",$item->photoAddress));
+                    ?>
 
                     <div id="carouselExampleInterval<?php echo $item->id; ?>" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -32,8 +51,8 @@
 
                         <div class="carousel-inner">
                             <?php for ($i = 0; $i < $quantity; $i++): ?>
-                                <div class="carousel-item <?php if ($i === 0) { ?> active <?php } ?>" data-interval="1000000">
-                                    <img src="/<?php echo $photoAddress[$i]; ?>" class="d-block w-100" alt="...">
+                                <div class="carousel-item <?php if ($i === 0) { ?> active <?php } ?>" data-interval="10000000">
+                                    <img src="<?php echo $photoAddress[$i]; ?>" class="d-block w-100" alt="...">
                                 </div>
                             <?php endfor; ?>
                         </div>
@@ -48,27 +67,18 @@
                         </a>
 
                     </div>
+
                 </div>
 
-                <div class="col-12 col-lg-7">       <!-- output the photos description in this column -->
-                    <div class="worksDescription">
-                        <?php $temp = $item->content;           // $worksList[content] contains the description of the "carousel" photos.
-                        while (strpos($temp, '*') > 0) : // "*" is used instead of paragraph in description text.
-                            ?>
-                            <p><?php
-                                echo stristr($temp, '*', true);
-                                $temp = stristr($temp, '*');
-                                $temp = substr($temp, 1);
-                                ?>
-                            </p>
-                        <?php endwhile; ?>
-                    </div>
-                </div>
-
+        <?php if (($cards % 2) === 1): ?>
             </div>
-        <?php endforeach; ?>
-    </div>
+        <?php endif;
+        $cards++;
+        endforeach;
+        ?>
 
+    <!-- it's necessary to add '</div>' for close 'row' when quantity cards are odd -->
+        <?php if (($cards % 2) === 1) { echo '</div>';}?>
 
     </div>
 
