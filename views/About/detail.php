@@ -6,6 +6,7 @@ use yii\helpers\Html;
 
 /* @var $colleague array */
 /* @var $colleagues object */
+/* @var $certificates array */
 
 //$this->title = 'My Yii Application';
 ?>
@@ -64,6 +65,8 @@ use yii\helpers\Html;
     </div>
 
 
+    <?php   if (!empty($colleague->certificates)): ?>
+
     <div class="certificates">
         <h3 class="h3Detail">Сертификаты</h3>
 
@@ -93,4 +96,7 @@ use yii\helpers\Html;
         ?>
 
     </div>
+
+    <?php   endif;  ?>
+
 </div>

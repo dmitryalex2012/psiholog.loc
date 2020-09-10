@@ -13,7 +13,6 @@ class Colleagues extends ActiveRecord
 
     public static function findColleague($colleagueID)
     {
-//        return Colleagues::find()->all();
         return Colleagues::find()->where(['id' => $colleagueID])->one();
     }
 }
