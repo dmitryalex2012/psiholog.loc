@@ -11,7 +11,15 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'components' => [
+
+        'modules' => [
+            'admin' => [
+                'class' => 'app\modules\admin\Module',
+                'layout' => 'main'
+            ],
+        ],
+
+        'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'nahr-jo2nnDLby4rIXKP1fcLgqtQoRRs',

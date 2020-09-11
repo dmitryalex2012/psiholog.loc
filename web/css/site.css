@@ -80,9 +80,9 @@ h1{
 
 .navbar-nav {
     flex-direction: row;
-    justify-content: center;
-    float: none !important;
-    text-align: center;
+    /*justify-content: center;*/
+    /*float: none !important;*/
+    /*text-align: center;*/
 }
 
 .navbar-collapse {
@@ -97,12 +97,18 @@ h1{
 }
 
 .navbar-brand {
-    padding: 0!important;
+    padding: 15px!important;
 }
 
 .navbar-toggle {
     float: initial;
     left: 25%;
+}
+
+#w2{
+    width: 75%;
+    display: flex;
+    justify-content: center;
 }
 
 .sidebar2 img{
@@ -134,10 +140,9 @@ button.btn.btn-outline-success {
     font-style: oblique;
 }
 
-.navbar-fixed-top, .navbar-fixed-bottom {
-    /* position: fixed; */
-    position: relative!important;
-}
+/*.navbar-fixed-top, .navbar-fixed-bottom {*/
+    /*position: relative!important;*/
+/*}*/
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
