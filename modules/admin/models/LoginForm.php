@@ -21,7 +21,7 @@ class LoginForm extends Model {
             ['email', 'email'],
 
             // пароль не может быть короче 10 символов
-            [['password'], 'string', 'min' => 10],
+            [['password'], 'string', 'min' => 8],
         ];
     }
 
