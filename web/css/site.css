@@ -91,7 +91,8 @@ h1{
 }
 
 .navbar-inverse .navbar-brand {
-    color: #dadada6b;
+    /*color: #dadada6b;*/
+    color: #6fa870;
     font-size: 14px;
     padding: 15px 0 15px 0;
 }
@@ -106,7 +107,7 @@ h1{
 }
 
 #w2{
-    width: 75%;
+    /*width: 75%;*/
     display: flex;
     justify-content: center;
 }

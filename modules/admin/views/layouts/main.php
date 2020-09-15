@@ -36,19 +36,17 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            [
-                'label' => 'Каталог',
-                'items' => [
-                    ['label' => 'Категории', 'url' => ['/admin/category/index']],
-                    ['label' => 'Товары', 'url' => ['/admin/product/index']],
-                ],
-            ],
-            ['label' => 'Заказы', 'url' => ['/admin/order/index']],
-            ['label' => 'Пользователи', 'url' => ['/admin/user/index']],
-            ['label' => 'Страницы', 'url' => ['/admin/page/index']],
-
-//            ['label' => 'Выйти', 'url' => ['/admin/auth/logout']],
-
+//            [
+//                'label' => 'Каталог',
+//                'items' => [
+//                    ['label' => 'Категории', 'url' => ['/admin/category/index']],
+//                    ['label' => 'Товары', 'url' => ['/admin/product/index']],
+//                ],
+//            ],
+            ['label' => 'Коллеги', 'url' => ['/admin/colleagues/index']],
+//            ['label' => 'Заказы', 'url' => ['/admin/order/index']],
+//            ['label' => 'Пользователи', 'url' => ['/admin/user/index']],
+//            ['label' => 'Страницы', 'url' => ['/admin/page/index']],
         ],
     ]);
     echo Nav::widget([
