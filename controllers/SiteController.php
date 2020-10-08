@@ -121,9 +121,7 @@ class SiteController extends Controller
 
         SiteServices::setDoctorOrMethod($doctor, $method);
 
-//        $model = new FeedbackForm();
-
-        if ($this->model->load(Yii::$app->request->post()) && $this->model->contact(Yii::$app->params['adminEmail'])) {
+        if ($this->model->load(Yii::$app->request->post()) && $this->model->contact()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();

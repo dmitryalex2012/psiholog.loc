@@ -30,6 +30,15 @@ class SiteServices
             (new self())->addSession('method', $methodTitle);
         }
 
+        if ((!isset($doctor))&&(!isset($method))){
+            $session = Yii::$app->session;
+            $session->open();
+            $session->remove('order');
+            $session->close();
+        }
+        unset($method);
+        unset($doctor);
+
         return;
     }
 
@@ -53,17 +62,4 @@ class SiteServices
 
         return;
     }
-
-
-//    public static function fromSession(){
-//        $session =Yii::$app->session;
-//        $session->open();
-//
-//        $order = $session->get('order');
-//
-//        $session->close();
-//
-//        return $order;
-//    }
-
 }

@@ -55,42 +55,39 @@ class FeedbackForm extends Model
      * @param string $email the target email address
      * @return bool whether the model passes validation
      */
-    public function contact($email)
+    public function contact()
     {
         $session = Yii::$app->session;
         $session->open();
 
         if (!$session->has('order')) {
-
-            $messageContent = "Доктор: " . "-" . "\r\n";
-            $messageContent = $messageContent . "Услуга: " . "-" . "\r\n";
-
+            $messageContent = "Доктор не выбран" . "\r\n";
+            $messageContent = $messageContent . "Услуга не выбрана" . "\n" . "\r\n";
         } else {
-
             $order = $session->get('order');
 
             $messageContent = "Запись на прием к доктору: " . $order['doctor'] . "\r\n";
             $messageContent = $messageContent . "Услуга: " . $order['method'] . "\n" . "\r\n";
-            $messageContent = $messageContent . "Данные о Заказчике:" . "\r\n";
-            $messageContent = $messageContent . "Телефон: " . $this->phone . "\r\n";
-            $messageContent = $messageContent . "Телефон: " . $this->email . "\r\n";
-            $messageContent = $messageContent . "Возраст: " . $this->age . "\r\n";
-            $messageContent = $messageContent . "Пол: " . $this->sex . "\r\n";
-            $messageContent = $messageContent . "Желаемая дата приема: " . $this->receiptDate . "\r\n";
-            $messageContent = $messageContent . "Причина обращения: " . $this->reason . "\r\n";
-
         }
 
-        unset($_SESSION['order']);
+        $messageContent = $messageContent . "     Данные о Заказчике:" . "\r\n";
+        $messageContent = $messageContent . "Имя: " . $this->name . "\r\n";
+        $messageContent = $messageContent . "Телефон: " . $this->phone . "\r\n";
+        $messageContent = $messageContent . "Email: " . $this->email . "\r\n";
+        $messageContent = $messageContent . "Возраст: " . $this->age . "\r\n";
+        $messageContent = $messageContent . "Пол: " . $this->sex . "\r\n";
+        $messageContent = $messageContent . "Желаемая дата приема: " . $this->receiptDate . "\r\n";
+        $messageContent = $messageContent . "Причина обращения: " . $this->reason . "\r\n";
 
         $session->close();
-//        Yii::$app->session->destroy();
+
 
         if ($this->validate()) {
+
             Yii::$app->mailer->compose()
                 ->setTo('DmitryAlex2012@gmail.com')
             //                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-                ->setFrom($email)
+                ->setFrom($this->email)
             //                ->setReplyTo([$this->email => $this->name])
                 ->setSubject($this->name)
                 ->setTextBody($messageContent)

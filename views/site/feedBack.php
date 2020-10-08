@@ -3,21 +3,21 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\FeedbackForm */
+/* @var $order array */
+
 
 /* @var $doctor string */
-
-
-/* @var $order array */
+/* @var $method string */
+/* @var $temp array */
 
 
 use himiklab\yii2\recaptcha\ReCaptcha2;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-//use yii\captcha\Captcha;
 
 $this->title = 'Запись на прием';
-//$this->params['breadcrumbs'][] = $this->title;
-//?>
+?>
+
 <div class="site-contact">
     <h1 class="h1Feedback"><?= Html::encode($this->title) ?></h1>
 
@@ -25,14 +25,15 @@ $this->title = 'Запись на прием';
     <?php
 //    echo "abc";
 //    $doctor = gettype($doctor);
-    echo $doctor;
-
+//    echo $doctor;
+//    echo $method;
+//    echo '<pre>';
+//    var_dump($temp);
+//    echo '</pre>';
 //    echo '<pre>';
 //    var_dump($order);
 //    echo '</pre>';
     ?>
-
-
 
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
@@ -74,9 +75,6 @@ $this->title = 'Запись на прием';
                     <p class="pFeedBack">Поля отмеченные <strong>*</strong> заполнять обязательно</p>
 
 
-<!--                    --><?//= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-//                        'template' => '<div class="row"><div class="col-md-5">{image}</div><div class="col-md-6">{input}</div></div>',
-//                    ]) ?>
                 <?= $form->field($model, 'reCaptcha', ['enableLabel' => false])->widget(ReCaptcha2::className(),
                     [   'siteKey' => '6LeNwsEZAAAAAJ0bKPaY5zGyD5hwOsGN9GE2kP30', // V2
                     ]
