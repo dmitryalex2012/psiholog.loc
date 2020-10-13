@@ -33,6 +33,7 @@ use yii\helpers\Html;
 
                     <H2 class="h2Offers">    <?php   echo $item->content; ?> </H2>
 
+
                     <?php   echo Html::a('Узнать больше', ['/offers/offer', 'id' => $i], ['class'=>'indexBtnOffers btn btn-outline-info']);
                     ?>
 
