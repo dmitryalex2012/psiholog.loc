@@ -25,17 +25,18 @@ use yii\helpers\Html;
 
         <div class="card-group col-12 col-md-6 col-xl-3">
 
-            <div class="card">
+            <div class="cardOffers">
 
-                <img src="<?php echo $item->photo; ?>" class="cardOffers card-img-top" alt="100%">
+                <div class="card">
 
-                <div class="card-img-overlay">
-
-                    <H2 class="h2Offers">    <?php   echo $item->content; ?> </H2>
-
-
-                    <?php   echo Html::a('Узнать больше', ['/offers/offer', 'id' => $i], ['class'=>'indexBtnOffers btn btn-outline-info']);
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i]);
                     ?>
+
+                    <div class="card-body">
+
+                        <H2 class="h2Offers">    <?php   echo $item->content; ?> </H2>
+
+                    </div>
 
                 </div>
 

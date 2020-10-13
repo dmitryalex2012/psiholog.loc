@@ -3,8 +3,11 @@
     /*margin: 0 50px;*/
 }
 
-.card{
+.cardColleagues{
     padding: 25px!important;
+}
+
+.card{
     border: none;
 }
 

@@ -34,23 +34,26 @@ use yii\helpers\Html;
         <div class="row card-groupColleagues">
         <?php endif; ?>
 
-            <div class="col-12 col-md-3 card">
+            <div class="col-12 col-md-3 cardColleagues">
 
-                <img src="<?php echo $colleague->photo; ?>" class="card-img-top" alt="...">
+                <div class="card">
 
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $colleague->name; ?></h5>
-                    <p class="card-text"><?php echo "Специализация: " . $colleague->specialization; ?></p>
-<!--                    <p class="card-text">--><?php //echo "Методы: " . $colleague->listMethods; ?><!--</p>-->
-                </div>
+                    <img src="<?php echo $colleague->photo; ?>" class="card-img-top" alt="...">
 
-                <div class="card-footer">
-                    <?php echo Html::a("Подробнее", ['/about/detail', 'colleagueID' => $colleague->id], ['class'=>'indexBtnAbout btn btn-outline-info']);
-                    ?>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $colleague->name; ?></h5>
+                        <p class="card-text"><?php echo "Специализация: " . $colleague->specialization; ?></p>
+    <!--                    <p class="card-text">--><?php //echo "Методы: " . $colleague->listMethods; ?><!--</p>-->
+                    </div>
+
+                    <div class="card-footer">
+                        <?php echo Html::a("Подробнее", ['/about/detail', 'colleagueID' => $colleague->id], ['class'=>'indexBtnAbout btn btn-outline-info']);
+                        ?>
+                    </div>
+
                 </div>
 
             </div>
-
         <?php if ((($i % 4) == 0)): ?>
         </div>                                      <!-- close "row" (after each 2 columns) -->
         <?php endif; ?>

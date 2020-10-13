@@ -21,7 +21,12 @@ h3, .h3 {
     padding: 0 40px;
 }
 
-.card-deck .card {
+.cardOffers{
+    padding: 10px!important;
+}
+
+/*.card-deck .card {*/
+.card-deck {
     margin-bottom: 30px!important;
 }
 
@@ -46,34 +51,20 @@ h3, .h3 {
     text-align: center;
 }
 
-/*.dropdown:hover .dropdown-menu {*/
-/*    display: block;*/
-/*}*/
-
 .h2Offers {
     font-size: larger;
     text-align: center;
     color: #11898e;
-    /*color: #127579;*/
-    /*text-shadow: 1px 1px 1px #4e674a, 0 0 1em #cfe0d7;*/
     margin: 0;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .indexBtnOffers{
-    width: 130px;
-    color: #127579;
-        position: absolute;
-        bottom: 35px;
-        left: 30%;
-    border-color: #127579!important;
-    /*width: 200px;*/
+    /*width: 130px;*/
     /*color: #127579;*/
-    /*position: absolute;*/
-    /*bottom: 35px;*/
-    /*left: 35%;*/
-    /*font-size: larger;*/
-    /*text-shadow: 1px 1px 1px #54ffd7, 0 0 1em #cfe0d7;*/
+    /*    position: absolute;*/
+    /*    bottom: 35px;*/
+    /*    left: 30%;*/
     /*border-color: #127579!important;*/
 }
 
@@ -84,17 +75,16 @@ h3, .h3 {
 
 .card:hover .h2Offers{
     color: #3290e1;
-    /*font-family: x-small, serif;*/
-    /*font-size: small;*/
-    /*text-shadow: 1px 1px 1px #4e674a, 0 0 1em #cfe0d7;*/
+}
+
+.imgOffers:hover{
+    transform: scale(1.05);
 }
 
 
 @media (max-width:1200px) {
     .card:hover .h2Offers{
-        /*color: #17a2b8;*/
         color: #3290e1;
-        /*font-size: xx-large;*/
     }
 
     .h2Offers {
@@ -108,14 +98,15 @@ h3, .h3 {
 
 @media (max-width:960px) {
     .h2Offers {
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
 }
 
 @media (max-width:768px) {
     .h2Offers {
-        padding-top: 60px;
-        /*color: #3290e1;*/
+        /*padding-top: 10px;*/
+        /*padding-bottom: 10px;*/
     }
 }
 
@@ -123,8 +114,4 @@ h3, .h3 {
     .indexBtnOffers {
         font-size: medium;
     }
-
-    /*.h2Offers {*/
-    /*    color: #3290e1;*/
-    /*}*/
 }
