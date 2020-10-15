@@ -9,25 +9,79 @@ $this->title = 'My Yii Application';
 
 <div class="site-index">
 
-<!--    <div class="jumbotron">-->
-<!--        <h1>Display</h1>-->
+
+
+    <?php
+
+
+//$foo = 10;   // $foo - это целое число
+//$bar = (boolean) $foo;   // $bar - это булев тип
+//echo $bar;
+//echo "<br>";
+//echo gettype($bar);
+
+//    $foo = 10.1;            // $foo - это целое число
+//    $str = "$foo";        // $str - это строка
+//    $fst = (string) $foo; // $fst - это тоже строка
+//
+//    // Это напечатает "они одинаковы"
+//    if ($fst === $str) {
+//        echo "они одинаковы";
+//    }
+//
+//    echo (strval($foo));
+
+
+//    class A {
+//        private $A; // Это станет '\0A\0A'
+//    }
+//
+//    class B extends A {
+//        private $A = 5; // Это станет '\0B\0A'
+//        public $AA = 55; // Это станет 'AA'
+//    }
+//    var_dump((array) new B());
+
+//    $obj = (object) array('1' => 'foo');
+//    var_dump(isset($obj->{'1'})); // выводит 'bool(false)';
+//    var_dump(key($obj)); // выводит 'int(1)';
+
+    $foo = 'Боб';              // Присваивает $foo значение 'Боб'
+    $bar = &$foo;              // Ссылка на $foo через $bar.
+    $bar = "Меня зовут $bar";  // Изменение $bar...
+    echo $bar;
+    echo $foo;                 // меняет и $foo.
+
+    echo '<br>';
+    echo $foo = "Стив";
+    $bar = &$foo;              // Ссылка на $foo через $bar.
+    $bar = "Меня зовут $bar";  // Изменение $bar...
+    echo $bar;
+    echo $foo;                 // меняет и $foo.
+
+    ?>
+
+
+
+
+
+
+
+
+<!--    <div class="body-content">-->
+<!---->
+<!--        <video width="320" height="240" controls="controls"  poster="--><?php //echo '/video/photo.jpg' ?><!--">-->
+<!--            <source src="--><?php //echo '/video/movie.ogv' ?><!--" type='video/ogg'>-->
+<!--            <source src="--><?php //echo '/video/movie.mp4' ?><!--" type='video/mp4'>-->
+<!--            <source src="--><?php //echo '/video/movie.webm' ?><!--" type='video/webm'>-->
+<!--            Your browser does not support the video tag.-->
+<!--        </video>-->
+<!---->
+<!--        <audio controls>-->
+<!--            <source src="--><?php //echo '/audio/Nikalaev.ogg' ?><!--" type="audio/ogg; codecs=vorbis">-->
+<!--            <source src="--><?php //echo '/audio/Nikalaev.mp3' ?><!--" type="audio/mpeg">-->
+<!--            Тег audio не поддерживается вашим браузером.-->
+<!--        </audio>-->
+<!---->
 <!--    </div>-->
-
-    <div class="body-content">
-
-        <video width="320" height="240" controls="controls"  poster="<?php echo '/video/photo.jpg' ?>">
-            <source src="<?php echo '/video/movie.ogv' ?>" type='video/ogg'>
-            <source src="<?php echo '/video/movie.mp4' ?>" type='video/mp4'>
-            <source src="<?php echo '/video/movie.webm' ?>" type='video/webm'>
-            Your browser does not support the video tag.
-        </video>
-
-        <audio controls>
-            <source src="<?php echo '/audio/Nikalaev.ogg' ?>" type="audio/ogg; codecs=vorbis">
-            <source src="<?php echo '/audio/Nikalaev.mp3' ?>" type="audio/mpeg">
-            Тег audio не поддерживается вашим браузером.
-<!--            <a href="--><?php //echo '/audio/Nikalaev.mp3' ?><!--">Скачайте музыку</a>.-->
-        </audio>
-
-    </div>
 </div>
