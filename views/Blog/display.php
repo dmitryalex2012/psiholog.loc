@@ -46,18 +46,42 @@ $this->title = 'My Yii Application';
 //    var_dump(isset($obj->{'1'})); // выводит 'bool(false)';
 //    var_dump(key($obj)); // выводит 'int(1)';
 
-    $foo = 'Боб';              // Присваивает $foo значение 'Боб'
-    $bar = &$foo;              // Ссылка на $foo через $bar.
-    $bar = "Меня зовут $bar";  // Изменение $bar...
-    echo $bar;
-    echo $foo;                 // меняет и $foo.
+//    $foo = 'Боб';              // Присваивает $foo значение 'Боб'
+//    $bar = &$foo;              // Ссылка на $foo через $bar.
+//    $bar = "Меня зовут $bar";  // Изменение $bar...
+//    echo $bar;
+//    echo $foo;                 // меняет и $foo.
+//
+//    echo '<br>';
+//    echo $foo = "Стив";
+//    $bar = &$foo;              // Ссылка на $foo через $bar.
+//    $bar = "Меня зовут $bar";  // Изменение $bar...
+//    echo $bar;
+//    echo $foo;                 // меняет и $foo.
 
-    echo '<br>';
-    echo $foo = "Стив";
-    $bar = &$foo;              // Ссылка на $foo через $bar.
-    $bar = "Меня зовут $bar";  // Изменение $bar...
-    echo $bar;
-    echo $foo;                 // меняет и $foo.
+//    const MY_CONST = 5;
+//
+//    echo MY_CONST . '<br>';
+//    echo PHP_VERSION . '<br>';
+//    echo __FILE__ . '<br>';
+
+//    $foo = 10;   // $foo - это целое число
+//    $bar = (boolean) $foo;
+//    echo $bar;
+
+//    $a = 3;
+//    $b = &$a; // $b - это ссылка на $a
+//
+//    print "$a\n"; // печатает 3
+//    print "$b\n"; // печатает 3
+//
+//    $b = 9; // меняем $a
+//
+//    print "$a\n"; // печатает 4
+//    print "$b\n";
+
+    $g = true or false;
+    echo $g;
 
     ?>
 
