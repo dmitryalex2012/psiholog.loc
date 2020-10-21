@@ -2,19 +2,18 @@
 
 namespace app\controllers;
 
-
 use yii\web\Controller;
 
 
-class BlogController extends Controller
+class VideoController extends Controller
 {
     /**
      * Displays "Offers" page.
      *
      * @return string
      */
-    public function actionDisplay()
+    public function actionVideos()
     {
-        return $this->render('indexBlog');
+        return $this->render('videos');
     }
 }

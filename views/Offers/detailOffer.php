@@ -18,8 +18,13 @@ use yii\helpers\Html;
 
     ?>
 
+    <h1 class="h1Services"><?php echo $detailOffer['content']; ?></h1>
+
     <div class="mainDescription">
-        <h1 class="h1Services"><?php echo $detailOffer['content']; ?></h1>
+
+
+
+
     </div>
 
 
