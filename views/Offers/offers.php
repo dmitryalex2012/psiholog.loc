@@ -34,7 +34,7 @@ use yii\helpers\Html;
 
                     <div class="card-body">
 
-                        <H2 class="h2Offers">    <?php   echo $item->content; ?> </H2>
+                        <H2 class="h2Offers">    <?php   echo $item->title; ?> </H2>
 
                     </div>
 
@@ -69,7 +69,7 @@ use yii\helpers\Html;
 <!---->
 <!--                <div class="card-img-overlay">-->
 <!---->
-<!--                    <H2 class="h2Offers">    --><?php //  echo $item->content; ?><!-- </H2>-->
+<!--                    <H2 class="h2Offers">    --><?php //  echo $item->title; ?><!-- </H2>-->
 <!---->
 <!--                    --><?php //  echo Html::a('Узнать больше', ['/offers/direction', 'id' => $i], ['class'=>'indexBtnOffers btn btn-outline-info']);
 //                    ?>

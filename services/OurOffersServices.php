@@ -21,4 +21,12 @@ class OurOffersServices
         return Offers::findOffer($id);
     }
 
+    public function extractContent($offer)
+    {
+        $content= $offer->content;
+        $content = explode("*", $content);
+
+        return $content;
+    }
+
 }

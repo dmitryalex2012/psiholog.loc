@@ -1,0 +1,25 @@
+.offersDetail{
+    margin: 0 30px;
+}
+
+.h3DetailOffer{
+    color: #626162;
+}
+
+.pDetailOffer{
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.pDetailOfferContent{
+    text-align: center;
+}
+
+.offerDuration{
+    margin-bottom: 30px;
+}
+
+.btnDetailOffer {
+    width: fit-content;
+    margin-bottom: 20px;
+}

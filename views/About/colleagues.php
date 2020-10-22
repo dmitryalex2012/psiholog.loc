@@ -62,5 +62,4 @@ use yii\helpers\Html;
     if (($i % 4) != 0)     { echo  "</div>";    }   // it's necessary to close "row" by "/div" when "col" are odd
     ?>
 
-
 </div>

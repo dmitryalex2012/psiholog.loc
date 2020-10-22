@@ -6,10 +6,10 @@ use app\models\Directions;
 
 class PsychiatryDirectionsServices
 {
-    public static function getPsychiatryDirections ()
-    {
-        return Directions::findPsychiatryDirections();
-    }
+//    public static function getPsychiatryDirections ()
+//    {
+//        return Directions::findPsychiatryDirections();
+//    }
 
     /**
      * Get information about our offers
@@ -18,9 +18,9 @@ class PsychiatryDirectionsServices
      *
      * @return mixed
      */
-    public static function getPsychiatryDirection ($id)
-    {
-        return Directions::findPsychiatryDirection($id);
-    }
+//    public static function getPsychiatryDirection ($id)
+//    {
+//        return Directions::findPsychiatryDirection($id);
+//    }
 
 }

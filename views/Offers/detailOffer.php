@@ -2,6 +2,7 @@
 
 <?php
 /* @var $detailOffer array */
+/* @var $content array */
 
 use yii\helpers\Html;
 
@@ -14,13 +15,47 @@ use yii\helpers\Html;
         'label'=> 'Услуги',
         'url'=> ['/offers/list'],
     ];
-    $this->params['breadcrumbs'][] = $detailOffer['content'];
+    $this->params['breadcrumbs'][] = $detailOffer['title'];
 
     ?>
 
-    <h1 class="h1Services"><?php echo $detailOffer['content']; ?></h1>
+    <h1 class="h1Services"><?php echo $detailOffer['title']; ?></h1>
 
     <div class="mainDescription">
+
+
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <h3 class="h3DetailOffer">Описание услуги</h3>
+
+                <?php
+                foreach ($content as $value){
+                    echo "<p class='pDetailOffer'>" . $value . "</p>";
+                }
+                ?>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="offerDuration">
+                    <h3 class="h3DetailOffer">Длительность:</h3>
+                    <p class="pDetailOfferContent"><?php echo $detailOffer['duration'] . " минут"; ?></p>
+                </div>
+
+                <div class="offerPrice">
+                    <h3 class="h3DetailOffer">Стоимость:</h3>
+                    <p class="pDetailOfferContent"><?php echo $detailOffer['price'] . " гривен"; ?></p>
+                </div>
+
+                <?php echo Html::a('Записаться на прием', ['/site/feedback', 'method'=>$detailOffer['id']], ['class'=>'indexBtn btnDetailOffer btn btn-success']);
+                ?>
+
+            </div>
+
+        </div>
 
 
 
@@ -28,8 +63,7 @@ use yii\helpers\Html;
     </div>
 
 
-    <?php echo Html::a('Записаться на прием', ['/site/feedback', 'method'=>$detailOffer['id']], ['class'=>'indexBtn btn btn-success']);
-    ?>
+
 
 <!--    --><?php
 //    echo '<pre>';

@@ -50,7 +50,7 @@ use yii\helpers\Html;
         <p class="contactsInformation">nade444@gmail.com</p>
 
         <p class="contactsHeading">МЫ РАБОТАЕМ:</p>
-        <p class="contactsInformation">Пн-Сб: с 8 до 20</p>
+        <p class="contactsInformation">Пн-Сб: с 10 до 21</p>
 
         <p class="contactsHeading">ПРИЕЗЖАЙТЕ:</p>
         <p class="contactsInformation">г. Киев, ул. Кирилловская 103</p>
