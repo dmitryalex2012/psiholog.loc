@@ -2,13 +2,13 @@
 
 namespace app\services;
 
-use app\models\Directions;
+//use app\models\Directions;
 
 class PsychiatryDirectionsServices
 {
 //    public static function getPsychiatryDirections ()
 //    {
-//        return Directions::findPsychiatryDirections();
+//        return Directions::findDirections();
 //    }
 
     /**
@@ -20,7 +20,7 @@ class PsychiatryDirectionsServices
      */
 //    public static function getPsychiatryDirection ($id)
 //    {
-//        return Directions::findPsychiatryDirection($id);
+//        return Directions::findDirection($id);
 //    }
 
 }

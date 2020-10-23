@@ -12,10 +12,11 @@ use yii\helpers\Html;
         <h1 class="h1Services">Услуги</h1>
     </div>
 
-    <!--    $offers {                                                                    -->
-    <!--        [photo] =>   "/photo/services/services1.jpg"       (photo address)         -->
-    <!--        [content] => "Врачебная консультация"  (service description)               -->
-    <!--              }                                                                    -->
+    <!--    $offers {                                                           -->
+    <!--        [photo] =>   "/photo/services/services1.jpg" (photo address)    -->
+    <!--        [title] => "Врачебная консультация" (service title)             -->
+    <!--        [content] => Service description                                -->
+    <!--            }                                                           -->
     <?php $i = 0;
     foreach ($offers as $key => $item):
 
@@ -29,7 +30,7 @@ use yii\helpers\Html;
 
                 <div class="card">
 
-                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i]);
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i, 'serviceType' => "offer"]);
                     ?>
 
                     <div class="card-body">
@@ -51,16 +52,41 @@ use yii\helpers\Html;
     <?php endforeach; ?>
 
 
-<!--    <h2 class="h2Services">Направления психиатрии</h2>-->
-<!---->
-<!--    --><?php //$i = 0;
-//    foreach ($directions as $key => $item):
-//
-//        // output 2 cards in line
-//        if ((((++$i) % 4) == 1)): ?>
-<!--            <div class="row">-->
-<!--        --><?php //endif; ?>
-<!---->
+    <h2 class="h2Services">Мы работаем с такими направлениями психотерапии</h2>
+
+    <?php $i = 0;
+    foreach ($directions as $key => $item):
+
+        /**  output 2 cards in line **/
+        if ((((++$i) % 4) == 1)): ?>
+            <div class="row">
+        <?php endif; ?>
+
+        <div class="card-group col-12 col-md-6 col-xl-3">
+
+            <div class="cardOffers">
+
+                <div class="card">
+
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['/offers/offer', 'id' => $i, 'serviceType' => "directions"]);
+                    ?>
+
+                    <div class="card-body">
+
+                        <H2 class="h2Offers">    <?php   echo $item->title; ?> </H2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
 <!--        <div class="card-group col-12 col-md-6 col-xl-3">-->
 <!---->
 <!--            <div class="card">-->
@@ -79,13 +105,17 @@ use yii\helpers\Html;
 <!--            </div>-->
 <!---->
 <!--        </div>-->
-<!---->
-        <!-- close "div" after fourth card -->
-<!--        --><?php //if ((($i % 4) == 0)): ?>
-<!--        </div>-->
-<!--    --><?php //endif; ?>
-<!---->
-<!--    --><?php //endforeach; ?>
+
+
+
+
+
+<!--         close "div" after fourth card-->
+        <?php if ((($i % 4) == 0)): ?>
+        </div>
+    <?php endif; ?>
+
+    <?php endforeach; ?>
 
 
 </div>
