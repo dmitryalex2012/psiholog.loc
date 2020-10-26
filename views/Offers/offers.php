@@ -7,6 +7,7 @@
 use yii\helpers\Html;
 
 ?>
+
 <div class="servicesContent">
     <div class="mainDescription">
         <h1 class="h1Services">Услуги</h1>
@@ -30,7 +31,7 @@ use yii\helpers\Html;
 
                 <div class="card">
 
-                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i, 'serviceType' => "offer"]);
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i, 'serviceType' => "offers"]);
                     ?>
 
                     <div class="card-body">

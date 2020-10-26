@@ -27,7 +27,7 @@ class OurOffersServices
 
     public function getOffer ($id, $serviceType)
     {
-        if ($serviceType === "offers"){
+        if ($serviceType == "offers"){
             $service = Offers::findOffer($id);
         }
         else{
