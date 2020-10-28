@@ -26,7 +26,7 @@ use yii\helpers\Html;
 
         <div class="row">
 
-            <div class="col-md-9">
+            <div class="col-md-9 rowDetailDescription">
 
                 <h3 class="h3DetailOffer">Описание услуги</h3>
 
@@ -42,7 +42,15 @@ use yii\helpers\Html;
 
                 <div class="offerDuration">
                     <h3 class="h3DetailOffer">Длительность:</h3>
-                    <p class="pDetailOfferContent"><?php echo $detailOffer['duration'] . " минут"; ?></p>
+
+<!--                    --><?php
+//                    $duration = $detailOffer['duration'];
+//                    if (((int)$detailOffer['duration']) != 0){
+//                        $duration = $detailOffer['duration'] . " минут";
+//                    }
+//                    ?>
+
+                    <p class="pDetailOfferContent"><?php echo $detailOffer['duration']; ?></p>
                 </div>
 
                 <div class="offerPrice">
