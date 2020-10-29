@@ -11,7 +11,6 @@ class SiteServices
      * Get doctor name or medical method from DB and save them in session
      *
      * @param $doctor
-     *
      * @param $method
      */
     public static function setDoctorOrMethod($doctor, $method){
@@ -25,7 +24,7 @@ class SiteServices
 
         if (isset($method)){
             $methodTitle = Site::findMethod($method);
-            $methodTitle = $methodTitle['content'];
+            $methodTitle = $methodTitle['title'];
 
             (new self())->addSession('method', $methodTitle);
         }
@@ -46,7 +45,6 @@ class SiteServices
      * Save doctor name or medical method in session
      *
      * @param $title
-     *
      * @param $value
      */
     private function addSession($title, $value){

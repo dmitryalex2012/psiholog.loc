@@ -52,7 +52,7 @@ class FeedbackForm extends Model
 
     /**
      * Sends an email to the specified email address using the information collected by this model.
-     * @param string $email the target email address
+     *
      * @return bool whether the model passes validation
      */
     public function contact()
@@ -85,7 +85,7 @@ class FeedbackForm extends Model
         if ($this->validate()) {
 
             Yii::$app->mailer->compose()
-                ->setTo('DmitryAlex2012@gmail.com')
+                ->setTo(['DmitryAlex2012@gmail.com', 'nade444@gmail.com'])
             //                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                 ->setFrom($this->email)
             //                ->setReplyTo([$this->email => $this->name])
