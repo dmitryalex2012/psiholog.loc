@@ -66,8 +66,8 @@ AppAsset::register($this);
                 ['label' => 'О нас',  'url' => ['/about/index']],
                 ['label' => 'Услуги', 'url' => ['/offers/list']],
                 ['label' => 'Галерея', 'url' => ['/gallery/index']],
-                ['label' => 'Видео', 'url' => ['/video/videos']],
-                ['label' => 'Блог', 'url' => ['/blog/display']],
+//                ['label' => 'Видео', 'url' => ['/video/videos']],
+//                ['label' => 'Блог', 'url' => ['/blog/display']],
                 ['label' => 'Контакты', 'url' => ['/contacts/load']],
 
 
