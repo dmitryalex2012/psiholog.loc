@@ -18,7 +18,7 @@ use yii\helpers\Html;
 <!---->
 <!--    <div class="body-content">-->
 
-    <h2 class="h2About">Наша команда</h2>
+    <h2 class="h2About">Немного о нас</h2>
 
 <?php
 //echo '<pre>';
@@ -29,12 +29,12 @@ use yii\helpers\Html;
     <?php $i = 0; ?>
 
     <?php foreach ($colleagues as $key=>$colleague):
-        if ((((++$i) % 4) == 1)):                   //  output cards in 2 columns
+        if ((((++$i) % 2) == 1)):                   //  output cards in 2 columns
     ?>
         <div class="row card-groupColleagues">
         <?php endif; ?>
 
-            <div class="col-12 col-md-3 cardColleagues">
+            <div class="col-12 col-md-6 cardColleagues">
 
                 <div class="card">
 
@@ -54,12 +54,12 @@ use yii\helpers\Html;
                 </div>
 
             </div>
-        <?php if ((($i % 4) == 0)): ?>
+        <?php if ((($i % 2) == 0)): ?>
         </div>                                      <!-- close "row" (after each 2 columns) -->
         <?php endif; ?>
 
     <?php endforeach;
-    if (($i % 4) != 0)     { echo  "</div>";    }   // it's necessary to close "row" by "/div" when "col" are odd
+    if (($i % 2) != 0)     { echo  "</div>";    }   // it's necessary to close "row" by "/div" when "col" are odd
     ?>
 
 </div>
