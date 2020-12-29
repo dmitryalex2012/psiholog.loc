@@ -2,7 +2,6 @@ body.home{
     width:100%;
     height:100%;
     background-size: cover;
-    /*margin: 0;*/
 }
 
 html { height: 100%; }
@@ -11,18 +10,6 @@ body{
     position: relative;
     padding-bottom: 50px;
 }
-/*body {*/
-/*    min-height:100%;*/
-/*    position:relative;*/
-/*    padding-bottom: 70px;*/
-/*}*/
-/*.footer {*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    height: 50px;*/
-/*}*/
 
 .footer{
     background-color: #adb5bd;
@@ -34,23 +21,9 @@ body{
     margin: 0;
 }
 
-
-/*.wrap{*/
-/*    !*min-height: 100%;*!*/
-/*    !*height: auto;*!*/
-/*    color: #636b6f;*/
-/*    position: relative;*/
-/*    font-family: 'Nunito', sans-serif;*/
-/*    font-weight: 200;*/
-/*    min-height: 100%;*/
-/*    padding-bottom: 50px;*/
-/*    margin: 0;*/
-/*}*/
-
 #w0{
     background-color: #e2e2e2;
     border-color: #e2e2e2;
-    /*border-color: #d4d4d46b;*/
 }
 
 .myBreadcrumbs{
@@ -74,15 +47,11 @@ h1{
 }
 
 .navbar-nav > li > a:hover {
-    /*color: #314f59 !important;*/
     color: #27dc7c !important;
 }
 
 .navbar-nav {
     flex-direction: row;
-    /*justify-content: center;*/
-    /*float: none !important;*/
-    /*text-align: center;*/
 }
 
 .navbar-collapse {
@@ -91,7 +60,6 @@ h1{
 }
 
 .navbar-inverse .navbar-brand {
-    /*color: #dadada6b;*/
     color: #6fa870;
     font-size: 14px;
     padding: 15px 0 15px 0;
@@ -141,10 +109,6 @@ button.btn.btn-outline-success {
     font-style: oblique;
 }
 
-/*.navbar-fixed-top, .navbar-fixed-bottom {*/
-    /*position: relative!important;*/
-/*}*/
-
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -154,7 +118,6 @@ button.btn.btn-outline-success {
 
 .navbar-default .navbar-nav > .active > a{
     background-color: transparent!important;
-    /*color: #105e89 !important;*/
     color: #fd715b !important;
 }
 
@@ -181,5 +144,18 @@ button.btn.btn-outline-success {
 
     .img-responsive{
         padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 690px) {
+    .containerLogo{
+        font-size: small;
+    }
+}
+
+@media (max-width: 643px) {
+    .containerLogo {
+        font-size: smaller;
+        text-align: center;
     }
 }

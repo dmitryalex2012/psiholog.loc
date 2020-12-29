@@ -1,14 +1,30 @@
+/*body{*/
+/*    background-color: #cbe0e3;*/
+/*}*/
+
+/*.cardColleagues{*/
+/*    color: #cbe0e3;*/
+/*}*/
+
+.site-index{
+    margin: 0 70px;
+}
 
 .card-groupColleagues{
     /*margin: 0 50px;*/
 }
 
 .cardColleagues{
-    padding: 25px!important;
+    padding: 20px 0!important;
 }
 
 .card{
     border: none;
+}
+
+.card-img-top{
+    width: 70%;
+    margin: auto;
 }
 
 .container{
@@ -21,7 +37,7 @@
     color: #669978;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-groupColleagues{
@@ -63,5 +79,9 @@
 
     .h2About{
         margin-bottom: 0;
+    }
+
+    .cardColleagues{
+        padding: 0!important;
     }
 }
