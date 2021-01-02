@@ -7,7 +7,7 @@
 use yii\helpers\Html; ?>
 
 
-<div class="site-index">
+<div class="site-indexMain">
 
     <div class="indexTextContent">
         <h2 class="h2Index">Профессиональная психологическая помощь в Киеве</h2>
@@ -17,7 +17,7 @@ use yii\helpers\Html; ?>
         <img src="<?php echo '/photo/common/indexBackground.jpg' ?>" class="card-img" alt="...">
         <div class="card-img-overlay">
             <div class="row">
-                <div class="col-9">
+                <div class="col-7">
                     <h1 class="card-titleH1">Джулай Надежда Мироновна</h1>
                     <h2 class="card-titleH2">Психиатр, психотерапевт</h2>
                     <div class="siteSlogan">
