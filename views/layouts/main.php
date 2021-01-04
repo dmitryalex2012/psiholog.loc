@@ -110,10 +110,10 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="containerLogo col-lg-9 col-md-10 col-9">
-                    <p>Психологическая помощь. Джулай Надежда Мироновна &copy; 2000-2020</p>
+                <div class="containerLogo col-lg-8 col-md-9 col-9">
+                    <p>Психологическая помощь. Джулай Надежда Мироновна &copy; 2000-2021</p>
                 </div>
-                <div class="containerRef col-lg-3 col-md-2 col-3">
+                <div class="containerRef col-lg-4 col-md-3 col-3">
                     <a href="https://www.facebook.com/nadiyadzhulai" target="_blank">   <img src="<?php echo "/photo/common/facebook1.png" ?>" alt=""/></a>
                     <a href="https://www.instagram.com/nadiyadzhulaik" target="_blank"><img src="<?php echo "/photo/common/inst1.png" ?>" alt=""/></a>
                 </div>
