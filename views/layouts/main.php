@@ -42,6 +42,9 @@ AppAsset::register($this);
 
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 
+<!--        <link rel="preconnect" href="https://fonts.gstatic.com">-->
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
 
 
     </head>
@@ -59,34 +62,37 @@ AppAsset::register($this);
 //                'class' => 'navbar-inverse navbar-fixed-top',
 //            ],
         ]);
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right'],
-            'items' => [
-                ['label' => 'Главная', 'url' => ['/site/index']],
-                ['label' => 'О нас',  'url' => ['/about/index']],
-                ['label' => 'Услуги', 'url' => ['/offers/list']],
-                ['label' => 'Галерея', 'url' => ['/gallery/index']],
-//                ['label' => 'Видео', 'url' => ['/video/videos']],
-//                ['label' => 'Блог', 'url' => ['/blog/display']],
-                ['label' => 'Контакты', 'url' => ['/contacts/load']],
+        try {
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+                    ['label' => 'Главная', 'url' => ['/site/index']],
+                    ['label' => 'О нас', 'url' => ['/about/index']],
+                    ['label' => 'Услуги', 'url' => ['/offers/list']],
+                    ['label' => 'Галерея', 'url' => ['/gallery/index']],
+                    //                ['label' => 'Видео', 'url' => ['/video/videos']],
+                    //                ['label' => 'Блог', 'url' => ['/blog/display']],
+                    ['label' => 'Контакты', 'url' => ['/contacts/load']],
 
 
-//                ['label' => 'Блог',  'url' => ['/cart/index'], 'linkOptions' => ['class' => 'classCart']],
+                    //                ['label' => 'Блог',  'url' => ['/cart/index'], 'linkOptions' => ['class' => 'classCart']],
 
-//            Yii::$app->user->isGuest ? (
-//            ['label' => 'Login', 'url' => ['/site/login']]
-//            ) : (
-//                '<li>'
-//                . Html::beginForm(['/site/logout'], 'post')
-//                . Html::submitButton(
-//                    'Logout (' . Yii::$app->user->identity->username . ')',
-//                    ['class' => 'btn btn-link logout']
-//                )
-//                . Html::endForm()
-//                . '</li>'
-//            )
-            ],
-        ]);
+                    //            Yii::$app->user->isGuest ? (
+                    //            ['label' => 'Login', 'url' => ['/site/login']]
+                    //            ) : (
+                    //                '<li>'
+                    //                . Html::beginForm(['/site/logout'], 'post')
+                    //                . Html::submitButton(
+                    //                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    //                    ['class' => 'btn btn-link logout']
+                    //                )
+                    //                . Html::endForm()
+                    //                . '</li>'
+                    //            )
+                ],
+            ]);
+        } catch (Exception $e) {
+        }
         ?>
 
 
@@ -96,11 +102,17 @@ AppAsset::register($this);
 
         <div class="container">
             <div class="myBreadcrumbs">
-                <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                    'homeLink' => false,        // delete "Home" link in breadcrumbs
-                ]) ?>
-                <?= Alert::widget() ?>
+                <?php try {
+                    echo Breadcrumbs::widget([
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        'homeLink' => false,        // delete "Home" link in breadcrumbs
+                    ]);
+                } catch (Exception $e) {
+                } ?>
+                <?php try {
+                    Alert::widget();
+                } catch (Exception $e) {
+                } ?>
             </div>
             <?= $content ?>
         </div>

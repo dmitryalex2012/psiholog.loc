@@ -94,6 +94,7 @@
     text-align: justify;
     padding-left: 20px;
     text-indent: 20px;
+    font-family: 'Yellowtail', cursive;
 }
 
 @media (max-width: 1400px) {

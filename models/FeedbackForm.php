@@ -85,7 +85,8 @@ class FeedbackForm extends Model
         if ($this->validate()) {
 
             Yii::$app->mailer->compose()
-                ->setTo(['DmitryAlex2012@gmail.com', 'nade444@gmail.com'])
+//                ->setTo(['DmitryAlex2012@gmail.com', 'nade444@gmail.com'])
+                ->setTo(['DmitryAlex2012@gmail.com'])
             //                ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                 ->setFrom($this->email)
             //                ->setReplyTo([$this->email => $this->name])
