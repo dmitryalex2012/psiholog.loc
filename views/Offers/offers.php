@@ -59,11 +59,12 @@ use yii\helpers\Html;
     foreach ($directions as $key => $item):
 
         /**  output 2 cards in line **/
-        if ((((++$i) % 4) == 1)): ?>
+        if ((((++$i) % 3) == 1)): ?>
             <div class="row">
         <?php endif; ?>
 
-        <div class="card-group col-12 col-md-6 col-xl-3">
+<!--        <div class="card-group col-12 col-md-6 col-xl-4">-->
+        <div class="card-group col-12 col-md-4">
 
             <div class="cardOffers">
 
@@ -112,7 +113,7 @@ use yii\helpers\Html;
 
 
 <!--         close "div" after fourth card-->
-        <?php if ((($i % 4) == 0)): ?>
+        <?php if ((($i % 3) == 0)): ?>
         </div>
     <?php endif; ?>
 

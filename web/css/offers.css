@@ -52,7 +52,7 @@ h3, .h3 {
 }
 
 .h2Offers {
-    font-size: larger;
+    font-size: x-large;
     text-align: center;
     color: #11898e;
     margin: 0;
@@ -100,6 +100,7 @@ h3, .h3 {
     .h2Offers {
         padding-top: 10px;
         padding-bottom: 20px;
+        font-size: large;
     }
 }
 
