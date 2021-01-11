@@ -10,33 +10,43 @@ class SiteServices
     /**
      * Get doctor name or medical method from DB and save them in session
      *
-     * @param $doctor
-     * @param $method
+     * @param $doctorID
+     * @param $serviceTypeID
+     * @param $serviceType
      */
-    public static function setDoctorOrMethod($doctor, $method){
+    public static function setDoctorOrMethod($doctorID, $serviceTypeID, $serviceType){
 
-        if (isset($doctor)){
-            $doctorName = Site::findDoctor($doctor);
+        if (isset($doctorID)){
+
+            $doctorName = Site::findDoctor($doctorID);
             $doctorName = $doctorName['name'];
 
             (new self())->addSession('doctor', $doctorName);
-        }
 
-        if (isset($method)){
-            $methodTitle = Site::findMethod($method);
+        } elseif (isset($serviceTypeID)){
+
+            if ($serviceType == 'offer'){
+                $methodTitle = Site::findMethod($serviceTypeID);
+            } else{
+                $methodTitle = Site::findDirection($serviceTypeID);
+            }
+
             $methodTitle = $methodTitle['title'];
-
             (new self())->addSession('method', $methodTitle);
+
         }
 
-        if ((!isset($doctor))&&(!isset($method))){
+        if ((!isset($doctorID))&&(!isset($serviceTypeID))){
+
             $session = Yii::$app->session;
             $session->open();
             $session->remove('order');
             $session->close();
+
         }
-        unset($method);
-        unset($doctor);
+
+        unset($serviceTypeID);
+        unset($doctorID);
 
         return;
     }

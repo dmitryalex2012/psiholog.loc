@@ -115,9 +115,10 @@ class SiteController extends Controller
     public function actionFeedback()
     {
         $doctor = Yii::$app->request->get('id');
-        $method = Yii::$app->request->get('method');
+        $serviceTypeID = Yii::$app->request->get('serviceTypeID');
+        $serviceType = Yii::$app->request->get('serviceType');
 
-        SiteServices::setDoctorOrMethod($doctor, $method);
+        SiteServices::setDoctorOrMethod($doctor, $serviceTypeID, $serviceType);
 
         if ($this->model->load(Yii::$app->request->post()) && $this->model->contact()) {
             Yii::$app->session->setFlash('contactFormSubmitted');

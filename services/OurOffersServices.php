@@ -29,9 +29,11 @@ class OurOffersServices
     {
         if ($serviceType == "offers"){
             $service = Offers::findOffer($id);
+//            $service['serviceType'] = 'offer';      /** For determination "Offer" or "Method" in FeedbackForm */
         }
         else{
             $service = Directions::findDirection($id);
+//            $service['serviceType'] = 'direction';  /** For determination "Offer" or "Method" in FeedbackForm */
         }
 
         return $service;

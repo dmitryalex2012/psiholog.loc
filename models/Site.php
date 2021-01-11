@@ -11,8 +11,13 @@ class Site extends ActiveRecord
         return Colleagues::find()->where(['id' => $doctorID])->one();
     }
 
-    public static function findMethod($methodID)
+    public static function findMethod($serviceTypeID)
     {
-        return Offers::find()->where(['id' => $methodID])->one();
+        return Offers::find()->where(['id' => $serviceTypeID])->one();
+    }
+
+    public static function findDirection($serviceTypeID)
+    {
+        return Directions::find()->where(['id' => $serviceTypeID])->one();
     }
 }
