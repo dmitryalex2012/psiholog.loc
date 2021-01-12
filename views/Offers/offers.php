@@ -31,7 +31,7 @@ use yii\helpers\Html;
 
                 <div class="card">
 
-                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', ['id' => $i, 'serviceType' => 'offers']]);
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['offers/offer', 'id' => $i, 'serviceType' => 'offers']);
                     ?>
 
                     <div class="card-body">
@@ -70,7 +70,7 @@ use yii\helpers\Html;
 
                 <div class="card">
 
-                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['/offers/offer', ['id' => $i, 'serviceType' => 'directions']]);
+                    <?= Html::a(Html::img($item->photo, ['class' => "imgOffers",'width' => "100%", 'height' => "100%"]), ['/offers/offer', 'id' => $i, 'serviceType' => 'directions']);
                     ?>
 
                     <div class="card-body">

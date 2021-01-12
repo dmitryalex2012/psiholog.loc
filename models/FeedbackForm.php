@@ -61,10 +61,17 @@ class FeedbackForm extends Model
         $session->open();
 
         if (!$session->has('order')) {
-            $messageContent = "Доктор не выбран" . "\r\n";
-            $messageContent = $messageContent . "Услуга не выбрана" . "\n" . "\r\n";
+            $messageContent = "Доктор: не выбран" . "\r\n";
+            $messageContent = $messageContent . "Услуга: не выбрана" . "\n" . "\r\n";
         } else {
             $order = $session->get('order');
+
+            if (!$order['doctor']){
+                $order['doctor'] = "Не выбран.";
+            }
+            if (!$order['method']){
+                $order['method'] = "Не выбрана.";
+            }
 
             $messageContent = "Запись на прием к доктору: " . $order['doctor'] . "\r\n";
             $messageContent = $messageContent . "Услуга: " . $order['method'] . "\n" . "\r\n";
