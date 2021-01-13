@@ -2,13 +2,10 @@
 
 namespace app\controllers;
 
-
-//use app\models\Directions;
 use app\services\OurOffersServices;
 use app\services\PsychiatryDirectionsServices;
 use Yii;
 use yii\web\Controller;
-
 
 class OffersController extends Controller
 {
@@ -32,7 +29,6 @@ class OffersController extends Controller
     {
         $offers = $this->offersServices->getOffers('offers');
         $directions = $this->offersServices->getOffers('directions');
-//        $directions = $this->psychiatryDirectionsServices->getPsychiatryDirections();
 
         return $this->render('offers', [
             'offers'=>$offers,
@@ -59,15 +55,4 @@ class OffersController extends Controller
         ]);
     }
 
-//    public function actionDirection()
-//    {
-//        $id = Yii::$app->request->get('id');
-//        $direction = $this->psychiatryDirectionsServices->getPsychiatryDirection($id);
-//        $content = [];
-//
-//        return $this->render('detailOffer', [
-//            'detailOffer'=>$direction,
-//            'content'=>$content
-//        ]);
-//    }
 }

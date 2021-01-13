@@ -8,7 +8,6 @@ use yii\helpers\Html;
 
 ?>
 
-
 <div class="offersDetail">
 
     <?php $this->params['breadcrumbs'][] = [
@@ -42,14 +41,6 @@ use yii\helpers\Html;
 
                 <div class="offerDuration">
                     <h3 class="h3DetailOffer">Длительность:</h3>
-
-<!--                    --><?php
-//                    $duration = $detailOffer['duration'];
-//                    if (((int)$detailOffer['duration']) != 0){
-//                        $duration = $detailOffer['duration'] . " минут";
-//                    }
-//                    ?>
-
                     <p class="pDetailOfferContent"><?php echo $detailOffer['duration']; ?></p>
                 </div>
 
@@ -65,18 +56,6 @@ use yii\helpers\Html;
 
         </div>
 
-
-
-
     </div>
-
-
-
-
-<!--    --><?php
-//    echo '<pre>';
-//    var_dump($detailOffer);
-//    echo '</pre>';
-//    ?>
 
 </div>

@@ -21,7 +21,7 @@ use yii\helpers\Html;
     <?php $i = 0;
     foreach ($offers as $key => $item):
 
-        if ((((++$i) % 4) == 1)): ?>                        <!--  output 2 cards in line -->
+        if ((((++$i) % 4) == 1)): ?>                        <!--  output 4 cards in line -->
             <div class="row">
         <?php endif; ?>
 
@@ -46,7 +46,8 @@ use yii\helpers\Html;
 
         </div>
 
-        <?php if ((($i % 4) == 0)): ?>                     <!-- close "div" after fourth card -->
+        <!-- close "div" after fourth card -->
+        <?php if ((($i % 4) == 0)): ?>
         </div>
         <?php endif; ?>
 
@@ -63,7 +64,6 @@ use yii\helpers\Html;
             <div class="row">
         <?php endif; ?>
 
-<!--        <div class="card-group col-12 col-md-6 col-xl-4">-->
         <div class="card-group col-12 col-md-4">
 
             <div class="cardOffers">
@@ -84,33 +84,6 @@ use yii\helpers\Html;
             </div>
 
         </div>
-
-
-
-
-
-<!--        <div class="card-group col-12 col-md-6 col-xl-3">-->
-<!---->
-<!--            <div class="card">-->
-<!---->
-<!--                <img src="--><?php //echo $item->photo; ?><!--" class="cardOffers card-img-top" alt="100%">-->
-<!---->
-<!--                <div class="card-img-overlay">-->
-<!---->
-<!--                    <H2 class="h2Offers">    --><?php //  echo $item->title; ?><!-- </H2>-->
-<!---->
-<!--                    --><?php //  echo Html::a('Узнать больше', ['/offers/direction', 'id' => $i], ['class'=>'indexBtnOffers btn btn-outline-info']);
-//                    ?>
-<!---->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
-
-
-
-
 
 <!--         close "div" after fourth card-->
         <?php if ((($i % 3) == 0)): ?>
