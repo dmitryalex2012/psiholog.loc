@@ -21,7 +21,8 @@ use yii\helpers\Html;
     <?php $i = 0;
     foreach ($offers as $key => $item):
 
-        if ((((++$i) % 4) == 1)): ?>                        <!--  output 4 cards in line -->
+        /**  output 4 cards in line */
+        if ((((++$i) % 4) == 1)): ?>
             <div class="row">
         <?php endif; ?>
 
@@ -85,7 +86,7 @@ use yii\helpers\Html;
 
         </div>
 
-<!--         close "div" after fourth card-->
+        <!-- close "div" after fourth card-->
         <?php if ((($i % 3) == 0)): ?>
         </div>
     <?php endif; ?>

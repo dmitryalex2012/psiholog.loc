@@ -1,5 +1,3 @@
-<!--<body class="services">-->
-
 <?php
 /* @var $detailOffer array */
 /* @var $content array */

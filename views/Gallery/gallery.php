@@ -1,19 +1,9 @@
 <?php
-
-///* @var $this yii\web\View */
 /* @var $gallery array */
-///* @var $colleagues object */
-
 //$this->title = 'My Yii Application';
 ?>
 
 <div class="containerGallery">
-
-<!--    --><?php
-//    echo '<pre>';
-//    print_r($gallery);
-//    echo '</pre>';
-//    ?>
 
     <div class="mainGallery">
 
@@ -31,7 +21,8 @@
 
                 <div class="col-12 col-lg-6">
 
-                    <h3><?php echo $item->title; ?></h3>                 <!-- output title photos group -->
+                    <!-- output title photos group -->
+                    <h3><?php echo $item->title; ?></h3>
 
                     <!-- Make array with photo addresses and count photo quantity. $gallery[photoAddress] contains -->
                     <!--   relative path to photo. Relative paths is divided by "," each from other -->
@@ -77,7 +68,7 @@
         endforeach;
         ?>
 
-    <!-- it's necessary to add '</div>' for close 'row' when quantity cards are odd -->
+        <!-- it's necessary to add '</div>' for close 'row' when quantity cards are odd -->
         <?php if (($cards % 2) === 1) { echo '</div>';}?>
 
     </div>

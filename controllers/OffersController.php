@@ -3,19 +3,16 @@
 namespace app\controllers;
 
 use app\services\OurOffersServices;
-use app\services\PsychiatryDirectionsServices;
 use Yii;
 use yii\web\Controller;
 
 class OffersController extends Controller
 {
     private $offersServices;
-    private $psychiatryDirectionsServices;
 
     public function __construct($id, $module, $config = [])
     {
         $this->offersServices = new OurOffersServices();
-        $this->psychiatryDirectionsServices = new PsychiatryDirectionsServices();
 
         parent::__construct($id, $module, $config);
     }

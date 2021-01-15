@@ -1,11 +1,12 @@
 <body class="contact">
 <?php
+
 /* @var $this yii\web\View */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model app\models\FeedbackForm */
 
 use yii\helpers\Html;
 
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\models\FeedbackForm */
 ?>
 
 <div class="containerContacts">
@@ -19,14 +20,16 @@ use yii\helpers\Html;
         let setLatLng = {lat: 50.481580, lng: 30.470194};
 
         function initMap() {
-            let map = new google.maps.Map(document.getElementById('map'), { // load map with zoom 15
+            /** load map with zoom 15 */
+            let map = new google.maps.Map(document.getElementById('map'), {
                 center: setLatLng,
                 zoom: 15
             });
-            let marker = new google.maps.Marker({                           // load marker
+            /** load marker */
+            let marker = new google.maps.Marker({
                 position: setLatLng,
                 map: map,
-                title: 'Дизайн-бюро "Мануфактура"',
+                title: 'Джулай Надежда Семеновна',
                 label: {
                     text: "Мы здесь",
                     fontWeight: 'bold',
