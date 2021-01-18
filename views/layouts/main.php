@@ -43,6 +43,8 @@ AppAsset::register($this);
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
 
+        <link rel="shortcut icon" href="/web/photo/common/favicon.ico" />
+
     </head>
     <body>
     <?php $this->beginBody() ?>
