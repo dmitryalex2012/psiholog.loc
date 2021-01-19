@@ -43,8 +43,7 @@ AppAsset::register($this);
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
 
-        <link rel="shortcut icon" href="/web/photo/common/favicon.ico" />
-
+        <link rel="shortcut icon" href="<?php echo Yii::$app->params['faviconPath']; ?>" />
     </head>
     <body>
     <?php $this->beginBody() ?>
@@ -116,7 +115,6 @@ AppAsset::register($this);
         </div>
     </div>
 
-
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -124,8 +122,8 @@ AppAsset::register($this);
                     <p>Психологическая помощь. Джулай Надежда Мироновна &copy; 2000-2021</p>
                 </div>
                 <div class="containerRef col-lg-4 col-md-3 col-3">
-                    <a href="https://www.facebook.com/nadiyadzhulai" target="_blank">   <img src="<?php echo "/photo/common/facebook1.png" ?>" alt=""/></a>
-                    <a href="https://www.instagram.com/nadiyadzhulaik" target="_blank"><img src="<?php echo "/photo/common/inst1.png" ?>" alt=""/></a>
+                    <a href="https://www.facebook.com/nadiyadzhulai" target="_blank">   <img src="<?php echo "/photo/common/facebook.png" ?>" alt=""/></a>
+                    <a href="https://www.instagram.com/nadiyadzhulaik" target="_blank"><img src="<?php echo "/photo/common/inst.png" ?>" alt=""/></a>
                 </div>
             </div>
         </div>

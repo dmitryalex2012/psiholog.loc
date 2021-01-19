@@ -6,6 +6,9 @@ return [
     'senderEmail' => 'noreply@example.com',
     'senderName' => 'Example.com mailer',
 
+    /* Favicon pass */
+    'faviconPath' => '/photo/common/favicon.ico',
+
     /* Название сайта в админ панели */
     'shopName' => 'психолог Джулай Надежда Мироновна',
 
