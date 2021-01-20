@@ -1,22 +1,9 @@
-/*body{*/
-/*    background-color: #e9f1f3;*/
-/*}*/
-/**/
-/*.card, .card-footer{*/
-/*    background-color: #e9f1f3;*/
-/*}*/
-
-
-/*.cardColleagues{*/
-/*    color: #cbe0e3;*/
-/*}*/
-
 .site-index{
     margin: 0 70px;
 }
 
 .card-groupColleagues{
-    /*margin: 0 50px;*/
+    margin-bottom: 10px!important;
 }
 
 .cardColleagues{
