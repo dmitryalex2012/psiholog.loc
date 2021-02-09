@@ -33,6 +33,11 @@ class AboutController extends Controller
         ]);
     }
 
+    /**
+     * Gets detail info about selected colleague.
+     *
+     * @return string
+     */
     public function actionDetail()
     {
         $colleagueID = Yii::$app->request->get('colleagueID');

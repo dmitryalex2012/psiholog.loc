@@ -20,11 +20,13 @@ use yii\helpers\Html;
         let setLatLng = {lat: 50.481580, lng: 30.470194};
 
         function initMap() {
+
             /** load map with zoom 15 */
             let map = new google.maps.Map(document.getElementById('map'), {
                 center: setLatLng,
                 zoom: 15
             });
+
             /** load marker */
             let marker = new google.maps.Marker({
                 position: setLatLng,
