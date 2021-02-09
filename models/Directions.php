@@ -7,7 +7,7 @@ use yii\db\ActiveRecord;
 class Directions extends ActiveRecord
 {
     /**
-     * Directions determination for "offer" page
+     * Determinations the psychology directions for "offer" page.
      *
      * @return array|ActiveRecord[]
      */
@@ -18,7 +18,7 @@ class Directions extends ActiveRecord
     }
 
     /**
-     * Determination selected direction for "detailOffer" page
+     * Determinations selected psychology direction for "detailOffer" page.
      *
      * @param $id
      * @return array|ActiveRecord|null

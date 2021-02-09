@@ -57,7 +57,8 @@ use yii\helpers\Html;
         <?php $i = 0; ?>
 
         <?php foreach ($certificates as $key=>$certificate):
-            if ((((++$i) % 6) == 1)):                   //  output cards in 6 columns
+            /** output cards in 6 columns */
+            if ((((++$i) % 6) == 1)):
                 ?>
                 <div class="row card-groupColleagues">
             <?php endif; ?>

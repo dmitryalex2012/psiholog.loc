@@ -1,6 +1,5 @@
 <?php
 /* @var $gallery array */
-//$this->title = 'My Yii Application';
 ?>
 
 <div class="containerGallery">
@@ -24,9 +23,9 @@
                     <!-- output title photos group -->
                     <h3><?php echo $item->title; ?></h3>
 
-                    <!-- Make array with photo addresses and count photo quantity. $gallery[photoAddress] contains -->
-                    <!--   relative path to photo. Relative paths is divided by "," each from other -->
                     <?php
+                    /** Make array with photo addresses and count photo quantity. $gallery[photoAddress] contains
+                            relative path to photo. Relative paths is divided by "," each from other. */
                     $photoAddress = (explode(",",$item->photoAddress));
                     $quantity = count(explode(",",$item->photoAddress));
                     ?>

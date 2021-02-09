@@ -13,7 +13,10 @@ use yii\helpers\Html;
     <?php $i = 0; ?>
 
     <?php foreach ($colleagues as $key=>$colleague):
-        if ((((++$i) % 2) == 1)):                   //  output cards in 2 columns
+
+        /** Output cards in 2 columns */
+        if ((((++$i) % 2) == 1)):
+
     ?>
         <div class="row card-groupColleagues">
         <?php endif; ?>

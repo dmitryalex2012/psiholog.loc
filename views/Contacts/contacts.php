@@ -40,7 +40,7 @@ use yii\helpers\Html;
     </script>
 
     <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5lk7r7SXnb01iASdBunyGA8wv8_1FW6k&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
 
     <div class="ourContacts col-12 col-md-3">
