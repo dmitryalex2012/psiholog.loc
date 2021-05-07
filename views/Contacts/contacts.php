@@ -17,7 +17,8 @@ use yii\helpers\Html;
         <div id="map"></div>
     </div>
     <script>
-        let setLatLng = {lat: 50.481580, lng: 30.470194};
+        // let setLatLng = {lat: 50.5273650259143, lng: 30.470194};
+        let setLatLng = {lat: 50.52301168959253, lng: 30.50978286746775};
 
         function initMap() {
 
@@ -42,7 +43,7 @@ use yii\helpers\Html;
     </script>
 
     <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5lk7r7SXnb01iASdBunyGA8wv8_1FW6k&callback=initMap">
     </script>
 
     <div class="ourContacts col-12 col-md-3">
@@ -58,8 +59,7 @@ use yii\helpers\Html;
         <p class="contactsInformation">Пн-Сб: с 10 до 21</p>
 
         <p class="contactsHeading">ПРИЕЗЖАЙТЕ:</p>
-        <p class="contactsInformation">г. Киев, ул. Кирилловская 103</p>
-        <p class="contactsInformation">корпус 11, 5 этаж, кабинет 508</p>
+        <p class="contactsInformation">г. Киев, ул. Героев Днепра 67</p>
         <p class="message">Пожалуйста, перезвоните заранее</p>
 
         <?php echo Html::a('Записаться на консультацию', ['/site/feedback'], ['class'=>'contactsBtn btn btn-success']);

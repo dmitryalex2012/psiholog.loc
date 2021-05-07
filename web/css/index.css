@@ -10,7 +10,8 @@
 }
 
 .card-titleH1{
-    color: white!important;
+    color: #746f6f!important;
+    /*#786363*/
     text-align: center;
     margin-bottom: 5px;
     margin-top: 100px;
@@ -30,7 +31,7 @@
 }
 
 .card-titleH2{
-    color: white!important;
+    color: #746f6f!important;
     text-align: center;
     /*margin-top: 0;*/
     margin: 10px 0 15px;
@@ -87,7 +88,7 @@
 .siteSlogan{
     text-align: center;
     font-size: large;
-    color: #fefefe;
+    color: #5c4e4e;
 }
 
 .pIndexSecondParagraph{

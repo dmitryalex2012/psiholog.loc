@@ -44,7 +44,7 @@ use yii\helpers\Html;
 
                 <div class="offerPrice">
                     <h3 class="h3DetailOffer">Стоимость:</h3>
-                    <p class="pDetailOfferContent"><?php echo $detailOffer['price'] . " гривен"; ?></p>
+                    <p class="pDetailOfferContent"><?php echo $detailOffer['price']; ?></p>
                 </div>
 
                 <?php echo Html::a('Записаться на прием', ['/site/feedback', 'serviceTypeID'=>$detailOffer['id'], 'serviceType'=>$detailOffer['notes']], ['class'=>'indexBtn btnDetailOffer btn btn-success']);

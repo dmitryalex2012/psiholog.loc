@@ -100,7 +100,7 @@ h3, .h3 {
     .h2Offers {
         padding-top: 10px;
         padding-bottom: 20px;
-        font-size: large;
+        font-size: x-large;
     }
 }
 
@@ -114,5 +114,8 @@ h3, .h3 {
 @media (max-width:575px) {
     .indexBtnOffers {
         font-size: medium;
+    }
+    .h2Offers {
+        font-size: large;
     }
 }

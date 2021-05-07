@@ -26,7 +26,7 @@ use yii\helpers\Html;
             <div class="row">
         <?php endif; ?>
 
-        <div class="card-group col-12 col-md-6 col-xl-3">
+        <div class="card-group col-12 col-md-6 col-lg-3">
 
             <div class="cardOffers">
 
