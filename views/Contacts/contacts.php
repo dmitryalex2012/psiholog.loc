@@ -17,7 +17,6 @@ use yii\helpers\Html;
         <div id="map"></div>
     </div>
     <script>
-        // let setLatLng = {lat: 50.5273650259143, lng: 30.470194};
         let setLatLng = {lat: 50.52301168959253, lng: 30.50978286746775};
 
         function initMap() {
