@@ -30,8 +30,11 @@ body{
 }
 
 #w0{
-    background-color: #e2e2e2;
-    border-color: #e2e2e2;
+    /*background-color: #e2e2e2;*/
+    background-color: #f6dccb;
+    /*border-color: #e2e2e2;*/
+    /*border-color: #f4e1e1;*/
+    border-color: #f6dccb;
 }
 
 .myBreadcrumbs{
