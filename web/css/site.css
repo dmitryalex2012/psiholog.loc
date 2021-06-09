@@ -20,7 +20,8 @@ body{
 }
 
 .footer{
-    background-color: #adb5bd;
+    /*background-color: #adb5bd;*/
+    background-color: #f6dccb;
     position: absolute;
     left: 0;
     right: 0;
