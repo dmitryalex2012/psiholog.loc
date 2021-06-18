@@ -21,21 +21,6 @@ $this->title = 'Запись на прием';
 <div class="site-contact">
     <h1 class="h1Feedback"><?= Html::encode($this->title) ?></h1>
 
-
-    <?php
-//    echo "abc";
-//    $doctor = gettype($doctor);
-//    echo $doctor;
-//    echo $method;
-//    echo '<pre>';
-//    var_dump($temp);
-//    echo '</pre>';
-//    echo '<pre>';
-//    var_dump($order);
-//    echo '</pre>';
-    ?>
-
-
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
@@ -52,11 +37,6 @@ $this->title = 'Запись на прием';
             <div class="feedbackField col-xl-4 col-sm-6 col-10">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-<!--                    --><?//= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-<!--                    --><?//= $form->field($model, 'email') ?>
-<!--                    --><?//= $form->field($model, 'subject') ?>
-<!--                    --><?//= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
                     <?= $form->field($model, 'name', ['enableLabel' => false])->textInput(array('placeholder' => 'Ваше имя*', 'class'=>'form-control text-center')) ?>
 
