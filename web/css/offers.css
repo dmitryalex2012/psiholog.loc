@@ -11,9 +11,7 @@
 }
 
 h3, .h3 {
-    /*font-family: cursive;*/
     text-align: center;
-    /*font-style: italic;*/
     font-variant: common-ligatures;
 }
 
@@ -25,13 +23,11 @@ h3, .h3 {
     padding: 10px!important;
 }
 
-/*.card-deck .card {*/
 .card-deck {
     margin-bottom: 30px!important;
 }
 
 .mainDescription {
-    /*margin-bottom: 30px;*/
 }
 
 .card-group{
