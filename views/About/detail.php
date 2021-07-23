@@ -85,8 +85,9 @@ use yii\helpers\Html;
             <?php endforeach;
 
             if (($i % 6) != 0) {
+            /** it's necessary to close "row" by "/div" when "col" are odd */
                 echo "</div>";
-            }   // it's necessary to close "row" by "/div" when "col" are odd
+            }
             ?>
 
         </div>
